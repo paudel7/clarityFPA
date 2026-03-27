@@ -63,7 +63,7 @@ body::before {
 /* ══════════════════════════════════════════════════════════
    TYPOGRAPHY
 ══════════════════════════════════════════════════════════ */
-.display-xl  { font-family: var(--font-display); font-size: clamp(2.8rem,6vw,5.5rem); font-weight:600; line-height:1.1; letter-spacing:-0.01em; }
+.display-xl  { font-family: var(--font-display); font-size: clamp(2.5rem,5.5vw,4.8rem); font-weight:600; line-height:1.1; letter-spacing:-0.01em; }
 .display-lg  { font-family: var(--font-display); font-size: clamp(2rem,4vw,3.5rem);   font-weight:600; line-height:1.15; letter-spacing:-0.01em; }
 .display-md  { font-family: var(--font-display); font-size: clamp(1.3rem,2.5vw,1.9rem); font-weight:400; }
 .label       { font-family: var(--font-mono); font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); }
@@ -77,7 +77,9 @@ body::before {
 .section     { position:relative; z-index:1; padding:clamp(5rem,10vw,9rem) 0; }
 .section-header { margin-bottom:4rem; }
 .section-header.centered { text-align:center; }
-.grid-2      { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; }
+.grid-2      { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; min-height:90vh; }
+.hero-grid { grid-template-columns:1fr 1fr; gap:clamp(2rem,4vw,3rem); align-items:start; min-height:90vh; }
+@media (max-width:900px) { .hero-grid { grid-template-columns:1fr; gap:2rem; } }
 .grid-3      { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
 .grid-4      { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
 .gold-rule   { display:block; width:48px; height:2px; background:var(--gold); margin-bottom:1.5rem; }
@@ -202,7 +204,13 @@ body::before {
   background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
   background-size:80px 80px;
 }
-.hero-content { position:relative; z-index:1; }
+.hero-content { 
+  position:relative; z-index:1; 
+  display:flex; flex-direction:column; justify-content:space-between;
+  min-height:100%; margin-bottom:0;
+  padding-right:clamp(1rem,3vw,2rem);
+}
+
 .hero-eyebrow {
   display:inline-flex; align-items:center; gap:0.75rem;
   background:var(--gold-dim); border:1px solid var(--border);
@@ -210,13 +218,15 @@ body::before {
 }
 .hero-eyebrow-dot { width:6px; height:6px; background:var(--gold); border-radius:50%; animation:pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
-.hero h1 { margin-bottom:1.5rem; }
+.hero h1 { margin-bottom:1.75rem; letter-spacing:-0.015em; }
+
 .hero h1 em { font-style:italic; color:var(--gold); }
-.hero-sub { max-width:560px; font-size:1.05rem; color:var(--cream-dim); line-height:1.8; margin-bottom:2.5rem; }
-.hero-ctas { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+.hero-sub { max-width:560px; font-size:1rem; color:var(--cream-dim); line-height:1.6; margin-bottom:2rem; font-weight:500; }
+
+.hero-ctas { display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.25rem; }
 /* Trust badges row */
 .hero-trust-badges {
-  display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:2rem;
+  display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem;
 }
 .trust-badge {
   display:inline-flex; align-items:center; gap:0.5rem;
@@ -229,7 +239,12 @@ body::before {
 }
 .trust-badge:hover { border-color:var(--gold); color:var(--gold-light); }
 .trust-badge-icon { font-size:0.8rem; }
-.hero-stats { display:flex; gap:3rem; padding-top:2.5rem; border-top:1px solid var(--border); flex-wrap:wrap; }
+.hero-stats { 
+  display:flex; gap:2rem; padding-top:2rem; 
+  border-top:1px solid var(--border); flex-wrap:wrap;
+  margin-top:1rem;
+}
+
 .hero-stat-num { font-family:var(--font-display); font-size:2.2rem; font-weight:600; color:var(--gold); line-height:1; }
 .hero-stat-label { font-size:0.8rem; color:var(--slate); margin-top:0.3rem; letter-spacing:0.05em; }
 
@@ -238,7 +253,7 @@ body::before {
   background:var(--navy-mid); border:1px solid var(--border);
   border-radius:12px; overflow:hidden;
   box-shadow:var(--shadow), 0 0 0 1px var(--border-sub);
-  position:relative; z-index:1;
+  position:relative; z-index:1; height:100%; min-height:380px;
 }
 .dash-topbar {
   background:var(--navy-light); padding:0.9rem 1.25rem;
@@ -272,7 +287,7 @@ body::before {
    HERO ANIMATED MOCK — PHASE SYSTEM
 ══════════════════════════════════════════════════════════ */
 .mock-panels {
-  position:relative; min-height:298px;
+  position:relative; min-height:320px;
   overflow:hidden;
 }
 .mock-panel {

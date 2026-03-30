@@ -1,0 +1,2502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClarityFP&A | Financial Transformation for Mission-Driven Organizations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+  <!-- ═══════════ NAV ═══════════ -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo"><img src="consultingLogo.png" alt="Clarity FP&A Logo" class="nav-logo-img"></a>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#trust-stack">Resources</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <div class="nav-cta">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme"
+            title="Toggle theme">🌙</button>
+          <a href="#trust-stack" class="btn btn-outline btn-sm">📥 Sample Reports</a>
+          <a href="#contact" class="btn btn-primary btn-sm"><span>Book Assessment</span></a>
+        </div>
+        <button class="nav-mobile-btn" id="mobileBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="#services" class="mnl">Services</a>
+    <a href="#approach" class="mnl">Approach</a>
+    <a href="#cases" class="mnl">Cases</a>
+    <a href="#trust-stack" class="mnl">Resources</a>
+    <a href="#about" class="mnl">About</a>
+    <a href="#contact" class="btn btn-primary" style="margin-top:1rem;"><span>Book Assessment →</span></a>
+  </div>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+
+          <div class="hero-eyebrow reveal">
+            <span class="hero-eyebrow-dot"></span>
+            <span class="label" style="color:var(--gold-light)">FP&A Consulting · Non-Profit · Public
+              Sector · Education · Energy · Environment</span>
+          </div>
+          <h1 class="display-xl reveal delay-1">
+            Modernize Financial <em>Reporting, <em>Budgeting, <em>Forecasting </em> &amp; Insights
+          </h1>
+          <h2 class="hero-tagline reveal delay-2">
+            Turn financial <span class="tagline-chaos">chaos</span> into <span class="tagline-clarity">clarity</span>
+            and confident decisions
+          </h2>
+          <p class="hero-description reveal delay-3">
+            We help <span class="hero-highlight">non-profits</span>, <span class="hero-highlight">public sector</span>,
+            and <span class="hero-highlight">education</span> teams
+            reduce <span class="hero-keyword">manual work</span>, improve <span class="hero-keyword">financial
+              visibility</span>,
+            and make <span class="hero-keyword">better decisions</span> using structured FP&A systems and <span
+              class="hero-highlight-ai">AI-assisted workflows</span>.
+          </p>
+          <div class="hero-ctas reveal delay-3">
+            <a href="#contact" class="btn btn-primary"><span>👉 Book Free FP&A Assessment</span></a>
+            <a href="#cases" class="btn btn-outline">See Sample Transformations →</a>
+          </div>
+          <!-- Trust badges linking to assets -->
+          <div class="hero-trust-badges reveal delay-3">
+            <span class="trust-badge" onclick="openModal('report')"><span class="trust-badge-icon">📄</span> Sample
+              Assessment Report</span>
+            <span class="trust-badge" onclick="openModal('budget')"><span class="trust-badge-icon">📊</span> Budget
+              Template</span>
+            <span class="trust-badge" onclick="openModal('dashboard')"><span class="trust-badge-icon">📈</span>
+              Dashboard Mock</span>
+            <span class="trust-badge" onclick="openModal('cases')"><span class="trust-badge-icon">📋</span> Case
+              Pack</span>
+          </div>
+          <div class="hero-stats reveal delay-4">
+            <div>
+              <div class="hero-stat-num">40–60%</div>
+              <div class="hero-stat-label">Reduction in<br>manual effort</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">10+</div>
+              <div class="hero-stat-label">Years in finance<br>&amp; FP&A</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">5+</div>
+              <div class="hero-stat-label">Sectors:<br>Non-profit · Education · Gov · Energy · Environment</div>
+            </div>
+          </div>
+        </div>
+        <!-- Animated Hero Mockup -->
+        <div class="reveal delay-2" style="position:relative;">
+
+          <div class="dashboard-mockup" id="heroMockup">
+
+            <!-- Topbar with phase label + dots -->
+            <div class="dash-topbar">
+              <div class="dash-dot r"></div>
+              <div class="dash-dot y"></div>
+              <div class="dash-dot g"></div>
+              <span class="dash-title" id="mockPhaseLabel">CURRENT STATE · PROBLEM</span>
+              <div class="mock-phase-dots">
+                <span class="mpd active" data-p="0"></span>
+                <span class="mpd" data-p="1"></span>
+                <span class="mpd" data-p="2"></span>
+                <span class="mpd" data-p="3"></span>
+              </div>
+            </div>
+
+            <!-- Phase panels container -->
+            <div class="mock-panels">
+
+              <!-- ── Phase 0: THE PROBLEM ── -->
+              <div class="mock-panel active" id="mock-phase-0">
+                <div class="mock-phase-header problem">
+                  <span class="mock-status-dot red"></span>
+                  Manual Process Detected
+                  <span class="mock-badge red">HIGH RISK</span>
+                </div>
+                <div class="dash-kpis">
+                  <div class="dash-kpi dash-kpi-bad">
+                    <div class="dash-kpi-label">Close Cycle</div>
+                    <div class="dash-kpi-val" style="color:var(--red-soft)">5 days <span class="neg">▲</span></div>
+                  </div>
+                  <div class="dash-kpi dash-kpi-bad">
+                    <div class="dash-kpi-label">Manual Steps</div>
+                    <div class="dash-kpi-val" style="color:var(--red-soft)">12 <span class="neg">⚠</span></div>
+                  </div>
+                  <div class="dash-kpi dash-kpi-bad">
+                    <div class="dash-kpi-label">Disconnected</div>
+                    <div class="dash-kpi-val" style="color:var(--red-soft)">4 src <span class="neg">✕</span></div>
+                  </div>
+                </div>
+                <div class="mock-issue-list">
+                  <div class="mock-issue"><span class="mi-dot red"></span>Data scattered across 4 disconnected systems
+                  </div>
+                  <div class="mock-issue"><span class="mi-dot red"></span>No single source of financial truth</div>
+                  <div class="mock-issue"><span class="mi-dot red"></span>Forecast not updated in 3+ months</div>
+                  <div class="mock-issue"><span class="mi-dot amber"></span>Grant tracking done manually in spreadsheets
+                  </div>
+                </div>
+                <div class="mock-effort-bar">
+                  <div class="mock-effort-label">Finance Team Time — Prep vs Analysis</div>
+                  <div class="mock-effort-track">
+                    <div class="mock-effort-bad">78%</div>
+                    <div class="mock-effort-good">22%</div>
+                  </div>
+                  <div class="mock-effort-legend">
+                    <span style="color:var(--red-soft)">78% preparing data</span>
+                    <span style="color:var(--green-soft)">22% analysis</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Phase 1: ANALYZING ── -->
+              <div class="mock-panel" id="mock-phase-1">
+                <div class="mock-phase-header analyzing">
+                  <span class="mock-spinner"></span>
+                  Analyzing Finance Process…
+                </div>
+                <div class="mock-scan-steps">
+                  <div class="mock-scan-step done"><span class="mss-icon">✓</span>Mapping data sources &amp; systems
+                  </div>
+                  <div class="mock-scan-step done"><span class="mss-icon">✓</span>Identifying manual workflow
+                    bottlenecks</div>
+                  <div class="mock-scan-step done"><span class="mss-icon">✓</span>Scoring FP&amp;A maturity (1–5 scale)
+                  </div>
+                  <div class="mock-scan-step scanning"><span class="mss-icon spin">◎</span>Detecting AI opportunity
+                    areas…</div>
+                  <div class="mock-scan-step pending"><span class="mss-icon muted">○</span>Building 30-60-90 day roadmap
+                  </div>
+                </div>
+                <div class="mock-scan-bars">
+                  <div class="mock-scan-bar-row">
+                    <span>Reporting</span>
+                    <div class="mock-scan-track">
+                      <div class="mock-scan-fill" style="--fill-w:35%"></div>
+                    </div>
+                    <span class="scan-score bad">2/5</span>
+                  </div>
+                  <div class="mock-scan-bar-row">
+                    <span>Forecasting</span>
+                    <div class="mock-scan-track">
+                      <div class="mock-scan-fill" style="--fill-w:22%"></div>
+                    </div>
+                    <span class="scan-score bad">1.5/5</span>
+                  </div>
+                  <div class="mock-scan-bar-row">
+                    <span>Data Quality</span>
+                    <div class="mock-scan-track">
+                      <div class="mock-scan-fill amber" style="--fill-w:52%"></div>
+                    </div>
+                    <span class="scan-score mid">3/5</span>
+                  </div>
+                  <div class="mock-scan-bar-row">
+                    <span>AI Readiness</span>
+                    <div class="mock-scan-track">
+                      <div class="mock-scan-fill amber" style="--fill-w:60%"></div>
+                    </div>
+                    <span class="scan-score mid">3.5/5</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Phase 2: INSIGHTS ── -->
+              <div class="mock-panel" id="mock-phase-2">
+                <div class="mock-phase-header insight">
+                  <span class="mock-status-dot gold"></span>
+                  Key Insights Identified
+                  <span class="mock-badge gold">3 QUICK WINS</span>
+                </div>
+                <div class="mock-findings">
+                  <div class="mock-finding">
+                    <div class="mf-icon">⚡</div>
+                    <div class="mf-text">
+                      <strong>Automate reporting pipeline</strong>
+                      <span>Save 4 days/month · High impact</span>
+                    </div>
+                    <span class="mf-tag high">HIGH</span>
+                  </div>
+                  <div class="mock-finding">
+                    <div class="mf-icon">📊</div>
+                    <div class="mf-text">
+                      <strong>Driver-based forecast model</strong>
+                      <span>Replace static budget · Medium effort</span>
+                    </div>
+                    <span class="mf-tag med">MED</span>
+                  </div>
+                  <div class="mock-finding">
+                    <div class="mf-icon">🤖</div>
+                    <div class="mf-text">
+                      <strong>AI variance commentary</strong>
+                      <span>Save 2 hrs/month · Low effort</span>
+                    </div>
+                    <span class="mf-tag low">LOW</span>
+                  </div>
+                </div>
+                <div class="mock-score-row">
+                  <div class="mock-score-item">
+                    <div class="mock-score-label">Current Efficiency</div>
+                    <div class="mock-score-val bad">38%</div>
+                  </div>
+                  <div class="mock-score-arrow">→</div>
+                  <div class="mock-score-item">
+                    <div class="mock-score-label">After Transformation</div>
+                    <div class="mock-score-val good">87%</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Phase 3: LIVE DASHBOARD ── -->
+              <div class="mock-panel" id="mock-phase-3">
+                <div class="mock-phase-header result">
+                  <span class="mock-status-dot green"></span>
+                  Transformed State · Live
+                  <span class="mock-badge green">DASHBOARD</span>
+                </div>
+                <div class="dash-kpis" style="margin-bottom:0.65rem">
+                  <div class="dash-kpi">
+                    <div class="dash-kpi-label">Total Budget</div>
+                    <div class="dash-kpi-val">$4.2M <span>↑12%</span></div>
+                  </div>
+                  <div class="dash-kpi">
+                    <div class="dash-kpi-label">YTD Variance</div>
+                    <div class="dash-kpi-val">-3.1% <span class="neg">▼</span></div>
+                  </div>
+                  <div class="dash-kpi">
+                    <div class="dash-kpi-label">Grant Util.</div>
+                    <div class="dash-kpi-val">87% <span>✓</span></div>
+                  </div>
+                </div>
+                <div class="dash-chart-area" style="margin-bottom:0.65rem">
+                  <div class="dash-chart-label">Monthly Actuals vs Budget</div>
+                  <div class="dash-bars" style="height:56px">
+                    <div class="dash-bar" style="height:45%"></div>
+                    <div class="dash-bar" style="height:55%"></div>
+                    <div class="dash-bar" style="height:40%"></div>
+                    <div class="dash-bar active" style="height:70%"></div>
+                    <div class="dash-bar" style="height:60%"></div>
+                    <div class="dash-bar highlight" style="height:90%"></div>
+                    <div class="dash-bar active" style="height:75%"></div>
+                    <div class="dash-bar" style="height:65%"></div>
+                  </div>
+                </div>
+                <div class="dash-grid-2">
+                  <div class="dash-mini">
+                    <div class="dash-mini-label">Fund Allocation</div>
+                    <div class="dash-progress">
+                      <div class="dash-progress-fill" style="width:72%"></div>
+                    </div>
+                    <div class="dash-progress-row"><span>Program A</span><span style="color:var(--gold)">72%</span>
+                    </div>
+                    <div class="dash-progress" style="margin-top:4px">
+                      <div class="dash-progress-fill" style="width:48%;background:var(--green-soft)"></div>
+                    </div>
+                    <div class="dash-progress-row"><span>Program B</span><span
+                        style="color:var(--green-soft)">48%</span></div>
+                  </div>
+                  <div class="dash-mini" style="display:flex;align-items:center;justify-content:center">
+                    <svg viewBox="0 0 60 60" style="width:54px;height:54px">
+                      <circle cx="30" cy="30" r="22" fill="none" stroke="rgba(201,168,76,0.12)" stroke-width="8" />
+                      <circle cx="30" cy="30" r="22" fill="none" stroke="var(--gold)" stroke-width="8"
+                        stroke-dasharray="87 51" stroke-dashoffset="22" stroke-linecap="round" />
+                      <text x="30" y="34" text-anchor="middle" font-size="10" fill="var(--cream)" font-family="serif"
+                        font-weight="600">87%</text>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /mock-panels -->
+
+            <!-- Outcome strip — always visible at bottom -->
+            <div class="mock-outcome-strip">
+              <span class="mos-item"><span class="mos-icon">⚡</span>Close: 5 days → 1 day</span>
+              <span class="mos-divider"></span>
+              <span class="mos-item"><span class="mos-icon">📊</span>Manual effort −60%</span>
+              <span class="mos-divider"></span>
+              <span class="mos-item"><span class="mos-icon">🤖</span>AI-assisted workflows</span>
+            </div>
+
+          </div><!-- /dashboard-mockup -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TRUST STRIP ═══════════ -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-strip-inner">
+        <div class="trust-strip-item"><span class="trust-strip-icon">📄</span> Sample Assessment Report</div>
+        <div class="trust-strip-divider"></div>
+        <div class="trust-strip-item"><span class="trust-strip-icon">📊</span> Non-Profit Budget Template</div>
+        <div class="trust-strip-divider"></div>
+        <div class="trust-strip-item"><span class="trust-strip-icon">📈</span> Dashboard Mockup</div>
+        <div class="trust-strip-divider"></div>
+        <div class="trust-strip-item"><span class="trust-strip-icon">🔮</span> Driver-Based Forecast Model</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ PAIN ═══════════ -->
+  <section class="section pain-section" id="pain">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-rule"></span>
+        <span class="label reveal">Pain Identification</span>
+        <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem;max-width:600px">Are you dealing <em
+            style="font-style:italic;color:var(--gold)">with any of </em> these challenges?</h2>
+        <p class="body-lg reveal delay-2" style="margin-top:1rem;max-width:540px">Finance teams in mission-driven
+          organizations face predictable, solvable problems — yet most continue working around them.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card reveal delay-1">
+          <div class="pain-icon">📅</div>
+          <h3>Reporting Takes Days or Weeks</h3>
+          <p>Monthly close is a marathon sprint. Leadership is waiting. Your team is exhausted — and the data is already
+            stale by the time it's ready.</p>
+        </div>
+        <div class="pain-card reveal delay-2">
+          <div class="pain-icon">🗂️</div>
+          <h3>Data Scattered Across Systems</h3>
+          <p>Spreadsheets, email attachments, accounting software that doesn't talk to anything — reconciling it all is
+            a full-time job in itself.</p>
+        </div>
+        <div class="pain-card reveal delay-3">
+          <div class="pain-icon">📊</div>
+          <h3>Forecasts Are Difficult to Maintain</h3>
+          <p>A forecast built once, never updated. Or one that requires a finance PhD to maintain. Neither helps
+            leadership make real decisions.</p>
+        </div>
+        <div class="pain-card reveal delay-1">
+          <div class="pain-icon">🏷️</div>
+          <h3>Grant &amp; Fund Tracking Is Messy</h3>
+          <p>Multiple funding streams, different requirements, unclear allocation rules. Audits are stressful. Donor
+            reporting takes forever.</p>
+        </div>
+        <div class="pain-card reveal delay-2">
+          <div class="pain-icon">⏳</div>
+          <h3>More Preparing Than Analyzing</h3>
+          <p>Your finance team's most valuable hours go to data wrangling, not insight generation. The work that moves
+            the mission gets squeezed out.</p>
+        </div>
+        <div class="pain-card reveal delay-3" style="background:var(--gold-dim);border-color:var(--gold)">
+          <div class="pain-icon">✅</div>
+          <h3>There's a Better Way</h3>
+          <p>These aren't permanent conditions — they're symptoms of systems that haven't been modernized. The fix is
+            structured, proven, and practical.</p>
+          <button class="btn-ghost" style="margin-top:1rem" onclick="openModal('report')">See the Assessment Sample
+            Report →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TRANSFORMATION ═══════════ -->
+  <section class="section transform-section" id="transformation">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="gold-rule center"></span>
+        <span class="label reveal">The Transformation</span>
+        <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem">Before <em
+            style="font-style:italic;color:var(--gold)">&amp;</em> After</h2>
+        <p class="body-lg reveal delay-2" style="margin-top:1rem;max-width:560px;margin-left:auto;margin-right:auto">See
+          exactly how a structured
+          FP&amp;A transformation turns manual chaos into automated clarity — no complete overhaul required.</p>
+      </div>
+      <div class="transform-table reveal">
+        <div>
+          <div class="transform-col-header before">⚠ Before: Current State</div>
+        </div>
+        <div class="transform-divider"></div>
+        <div>
+          <div class="transform-col-header after">✓ After: Transformed State</div>
+        </div>
+        <div class="transform-row reveal delay-1">
+          <div class="transform-cell before">Manual spreadsheets and copy-paste workflows</div>
+          <div class="transform-cell-divider"></div>
+          <div class="transform-cell after">Automated workflows with live data connections</div>
+        </div>
+        <div class="transform-row reveal delay-1">
+          <div class="transform-cell before">Static annual budgets revisited once a year</div>
+          <div class="transform-cell-divider"></div>
+          <div class="transform-cell after">Dynamic rolling forecasts updated continuously</div>
+        </div>
+        <div class="transform-row reveal delay-2">
+          <div class="transform-cell before">Confusing data with no single source of truth</div>
+          <div class="transform-cell-divider"></div>
+          <div class="transform-cell after">Clear dashboards everyone can read and trust</div>
+        </div>
+        <div class="transform-row reveal delay-2">
+          <div class="transform-cell before">Reactive decisions made after problems appear</div>
+          <div class="transform-cell-divider"></div>
+          <div class="transform-cell after">Strategic insights that anticipate and prevent issues</div>
+        </div>
+        <div class="transform-row reveal delay-3">
+          <div class="transform-cell before">Grant tracking in disconnected spreadsheet tabs</div>
+          <div class="transform-cell-divider"></div>
+          <div class="transform-cell after">Structured fund tracking with automated variance alerts</div>
+        </div>
+        <div class="transform-row reveal delay-3">
+          <div class="transform-cell before">Finance team buried in data prep every month</div>
+          <div class="transform-cell-divider"></div>
+          <div class="transform-cell after">Finance team focused on analysis and advisory</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TRUST STACK (CORE NEW SECTION) ═══════════ -->
+  <section class="section trust-stack-section" id="trust-stack">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-rule"></span>
+        <span class="label reveal">Evidence &amp; Credibility</span>
+        <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem;max-width:680px">Proof Before Commitment — <em
+            style="font-style:italic;color:var(--gold)">Five Assets</em> That Show You Our Work</h2>
+        <p class="body-lg reveal delay-2" style="margin-top:1rem;max-width:580px">
+          Before engaging with any consultant, you deserve to see evidence of capability. Below are five purpose-built
+          assets — downloadable samples, templates, and reports — that demonstrate exactly what you'll receive.
+        </p>
+      </div>
+
+      <div class="trust-stack-banner reveal">
+        <div class="trust-stack-banner-text">
+          <span>🔍</span>
+          <div>
+            <h4>Explore Our Work Before You Commit</h4>
+            <p>Preview the structure and depth of every deliverable — click any card to see inside</p>
+          </div>
+        </div>
+        <a href="#resources" class="btn btn-outline btn-sm">Go to Full Resource Hub →</a>
+      </div>
+
+      <div class="assets-grid">
+
+        <!-- 1. FP&A Assessment Report -->
+        <div class="asset-card reveal delay-1" onclick="openModal('report')">
+          <div class="asset-card-preview">
+            <div class="asset-preview-inner">
+              <div style="display:flex;gap:12px;align-items:flex-end">
+                <div class="preview-pdf-page">
+                  <div class="preview-line gold"></div>
+                  <div class="preview-line wide" style="height:3px;margin-top:4px"></div>
+                  <div class="preview-line short" style="height:2px;margin-top:2px;opacity:0.5"></div>
+                  <div style="margin-top:8px;display:flex;flex-direction:column;gap:3px">
+                    <div class="preview-line med"></div>
+                    <div class="preview-line wide"></div>
+                    <div class="preview-line short"></div>
+                    <div class="preview-line med"></div>
+                  </div>
+                  <div style="margin-top:auto;padding-top:8px;border-top:1px solid rgba(201,168,76,0.2)">
+                    <div class="preview-line short" style="opacity:0.4"></div>
+                  </div>
+                </div>
+                <div class="preview-pdf-page" style="width:90px;height:115px;opacity:0.5">
+                  <div style="display:flex;flex-direction:column;gap:3px">
+                    <div class="preview-line wide"></div>
+                    <div class="preview-line med"></div>
+                    <div class="preview-line short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="asset-card-overlay">
+              <div class="asset-card-overlay-btn">👁 Preview Report</div>
+            </div>
+          </div>
+          <div class="asset-card-body">
+            <div class="asset-type-badge">📄 PDF Report · 8–12 Pages</div>
+            <h3>FP&A Process Assessment Report</h3>
+            <p>The flagship deliverable. An 8–12 page structured report covering current state analysis, maturity
+              scoring, AI opportunities, and a 30-60-90 day roadmap. This is what every client receives.</p>
+            <div class="asset-card-actions">
+              <button class="btn-download"
+                onclick="event.stopPropagation();handleDownload('fpa-assessment-sample.pdf')">
+                <span class="dl-icon">⬇</span> Preview / Download
+              </button>
+              <span class="upload-status pending"><span class="upload-status-dot"></span> Awaiting your file</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Budget Template -->
+        <div class="asset-card reveal delay-2" onclick="openModal('budget')">
+          <div class="asset-card-preview">
+            <div class="asset-preview-inner">
+              <div class="preview-sheet">
+                <div class="preview-sheet-row">
+                  <div class="preview-sheet-cell h"></div>
+                  <div class="preview-sheet-cell h"></div>
+                  <div class="preview-sheet-cell h"></div>
+                  <div class="preview-sheet-cell h"></div>
+                </div>
+                <div class="preview-sheet-row">
+                  <div class="preview-sheet-cell"></div>
+                  <div class="preview-sheet-cell g"></div>
+                  <div class="preview-sheet-cell r"></div>
+                  <div class="preview-sheet-cell"></div>
+                </div>
+                <div class="preview-sheet-row">
+                  <div class="preview-sheet-cell"></div>
+                  <div class="preview-sheet-cell g"></div>
+                  <div class="preview-sheet-cell g"></div>
+                  <div class="preview-sheet-cell"></div>
+                </div>
+                <div class="preview-sheet-row">
+                  <div class="preview-sheet-cell h"></div>
+                  <div class="preview-sheet-cell h"></div>
+                  <div class="preview-sheet-cell h"></div>
+                  <div class="preview-sheet-cell h"></div>
+                </div>
+                <div class="preview-sheet-row">
+                  <div class="preview-sheet-cell"></div>
+                  <div class="preview-sheet-cell g"></div>
+                  <div class="preview-sheet-cell r"></div>
+                  <div class="preview-sheet-cell"></div>
+                </div>
+                <div class="preview-sheet-row">
+                  <div class="preview-sheet-cell"></div>
+                  <div class="preview-sheet-cell g"></div>
+                  <div class="preview-sheet-cell g"></div>
+                  <div class="preview-sheet-cell"></div>
+                </div>
+              </div>
+            </div>
+            <div class="asset-card-overlay">
+              <div class="asset-card-overlay-btn">👁 Preview Template</div>
+            </div>
+          </div>
+          <div class="asset-card-body">
+            <div class="asset-type-badge">📊 Excel / Google Sheets · 4 Tabs</div>
+            <h3>Non-Profit Budget Template</h3>
+            <p>A ready-to-use budget workbook with four structured tabs: Summary dashboard, Fund-level budget vs actual,
+              Expense categories (program/admin/salaries), and a monthly forecast tab — fully formula-driven.</p>
+            <div class="asset-card-actions">
+              <button class="btn-download"
+                onclick="event.stopPropagation();handleDownload('nonprofit-budget-template.xlsx')">
+                <span class="dl-icon">⬇</span> Preview / Download
+              </button>
+              <span class="upload-status pending"><span class="upload-status-dot"></span> Awaiting your file</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Dashboard Mock -->
+        <div class="asset-card reveal delay-3" onclick="openModal('dashboard')">
+          <div class="asset-card-preview" style="background:var(--navy-mid)">
+            <div class="asset-preview-inner">
+              <div style="width:180px">
+                <div style="display:flex;gap:6px;margin-bottom:8px">
+                  <div
+                    style="flex:1;background:rgba(201,168,76,0.15);border:1px solid var(--border);border-radius:4px;padding:5px;font-size:0;height:30px">
+                  </div>
+                  <div
+                    style="flex:1;background:rgba(78,173,124,0.12);border:1px solid rgba(78,173,124,0.2);border-radius:4px;height:30px">
+                  </div>
+                  <div
+                    style="flex:1;background:rgba(201,168,76,0.15);border:1px solid var(--border);border-radius:4px;height:30px">
+                  </div>
+                </div>
+                <div class="preview-chart">
+                  <div class="preview-chart-bars">
+                    <div class="preview-chart-bar" style="height:45%"></div>
+                    <div class="preview-chart-bar b" style="height:55%"></div>
+                    <div class="preview-chart-bar" style="height:38%"></div>
+                    <div class="preview-chart-bar b" style="height:70%"></div>
+                    <div class="preview-chart-bar g" style="height:88%"></div>
+                    <div class="preview-chart-bar" style="height:62%"></div>
+                  </div>
+                </div>
+                <div style="display:flex;gap:5px;margin-top:5px">
+                  <div
+                    style="flex:2;height:20px;background:rgba(201,168,76,0.1);border:1px solid var(--border);border-radius:3px">
+                  </div>
+                  <div
+                    style="flex:1;height:20px;background:rgba(78,173,124,0.1);border:1px solid rgba(78,173,124,0.2);border-radius:3px">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="asset-card-overlay">
+              <div class="asset-card-overlay-btn">👁 Preview Dashboard</div>
+            </div>
+          </div>
+          <div class="asset-card-body">
+            <div class="asset-type-badge">📈 Power BI Style · Visual Mock</div>
+            <h3>Finance Dashboard Mockup</h3>
+            <p>A visual mockup of the Power BI-style dashboard we build for clients. Includes: Budget vs Actual chart,
+              expense breakdown, fund utilization, and forecast trend — labelled for non-profit finance teams.</p>
+            <div class="asset-card-actions">
+              <button class="btn-download" onclick="event.stopPropagation();handleDownload('dashboard-mockup.pdf')">
+                <span class="dl-icon">⬇</span> Preview / Download
+              </button>
+              <span class="upload-status pending"><span class="upload-status-dot"></span> Awaiting your file</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Forecast Model -->
+        <div class="asset-card reveal delay-1" onclick="openModal('forecast')">
+          <div class="asset-card-preview">
+            <div class="asset-preview-inner">
+              <div style="width:170px">
+                <div
+                  style="background:var(--navy-light);border:1px solid var(--border);border-radius:6px;overflow:hidden;box-shadow:4px 4px 16px rgba(0,0,0,0.5)">
+                  <div
+                    style="background:var(--gold-dim);padding:5px 10px;border-bottom:1px solid var(--border);font-size:0;height:20px;display:flex;align-items:center;gap:4px">
+                    <div style="height:3px;flex:1;background:var(--gold);border-radius:1px;opacity:0.6"></div>
+                  </div>
+                  <div style="padding:8px 10px;display:flex;flex-direction:column;gap:5px">
+                    <div style="display:flex;gap:5px">
+                      <div style="width:50px;height:14px;background:rgba(201,168,76,0.2);border-radius:2px"></div>
+                      <div style="flex:1;height:14px;background:rgba(78,173,124,0.2);border-radius:2px"></div>
+                      <div style="flex:1;height:14px;background:rgba(212,78,78,0.12);border-radius:2px"></div>
+                    </div>
+                    <div style="display:flex;gap:5px">
+                      <div style="width:50px;height:14px;background:rgba(201,168,76,0.08);border-radius:2px"></div>
+                      <div style="flex:1;height:14px;background:rgba(201,168,76,0.15);border-radius:2px"></div>
+                      <div style="flex:1;height:14px;background:rgba(201,168,76,0.1);border-radius:2px"></div>
+                    </div>
+                    <div style="display:flex;gap:5px">
+                      <div style="width:50px;height:14px;background:rgba(201,168,76,0.08);border-radius:2px"></div>
+                      <div style="flex:1;height:14px;background:rgba(201,168,76,0.12);border-radius:2px"></div>
+                      <div style="flex:1;height:14px;background:rgba(78,173,124,0.2);border-radius:2px"></div>
+                    </div>
+                  </div>
+                  <div
+                    style="background:rgba(201,168,76,0.05);padding:5px 10px;border-top:1px solid var(--border);display:flex;gap:5px">
+                    <div style="height:4px;flex:1;border-radius:2px;background:var(--gold);opacity:0.5"></div>
+                    <div style="height:4px;flex:1;border-radius:2px;background:var(--green-soft);opacity:0.4"></div>
+                    <div style="height:4px;flex:1;border-radius:2px;background:var(--red-soft);opacity:0.3"></div>
+                  </div>
+                </div>
+                <div style="display:flex;gap:5px;margin-top:8px">
+                  <div
+                    style="flex:1;padding:4px 6px;background:rgba(78,173,124,0.1);border:1px solid rgba(78,173,124,0.25);border-radius:3px;font-size:0.6rem;color:var(--green-soft);font-family:var(--font-mono);text-align:center">
+                    BASE</div>
+                  <div
+                    style="flex:1;padding:4px 6px;background:rgba(201,168,76,0.1);border:1px solid var(--border);border-radius:3px;font-size:0.6rem;color:var(--gold);font-family:var(--font-mono);text-align:center">
+                    BEST</div>
+                  <div
+                    style="flex:1;padding:4px 6px;background:rgba(212,78,78,0.1);border:1px solid rgba(212,78,78,0.25);border-radius:3px;font-size:0.6rem;color:var(--red-soft);font-family:var(--font-mono);text-align:center">
+                    WORST</div>
+                </div>
+              </div>
+            </div>
+            <div class="asset-card-overlay">
+              <div class="asset-card-overlay-btn">👁 Preview Model</div>
+            </div>
+          </div>
+          <div class="asset-card-body">
+            <div class="asset-type-badge">🔮 Excel Model · Driver-Based</div>
+            <h3>Driver-Based Forecast Model</h3>
+            <p>A structured Excel forecast model with revenue drivers, expense drivers, and a scenario toggle (base /
+              best / worst case). Shows the structured thinking behind our forecasting approach — not just numbers.</p>
+            <div class="asset-card-actions">
+              <button class="btn-download" onclick="event.stopPropagation();handleDownload('forecast-model.xlsx')">
+                <span class="dl-icon">⬇</span> Preview / Download
+              </button>
+              <span class="upload-status pending"><span class="upload-status-dot"></span> Awaiting your file</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Mini Case Pack -->
+        <div class="asset-card reveal delay-2" onclick="openModal('cases')">
+          <div class="asset-card-preview">
+            <div class="asset-preview-inner">
+              <div class="preview-case">
+                <div class="preview-case-item">
+                  <div class="preview-case-tag"></div>
+                  <div class="preview-case-lines">
+                    <div class="preview-case-line wide"></div>
+                    <div class="preview-case-line short"></div>
+                    <div class="preview-case-line wide" style="opacity:0.5"></div>
+                  </div>
+                </div>
+                <div class="preview-case-item">
+                  <div class="preview-case-tag" style="background:var(--green-soft);opacity:0.5"></div>
+                  <div class="preview-case-lines">
+                    <div class="preview-case-line wide"></div>
+                    <div class="preview-case-line short"></div>
+                  </div>
+                </div>
+                <div class="preview-case-item">
+                  <div class="preview-case-tag" style="background:var(--slate);opacity:0.4"></div>
+                  <div class="preview-case-lines">
+                    <div class="preview-case-line wide"></div>
+                    <div class="preview-case-line short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="asset-card-overlay">
+              <div class="asset-card-overlay-btn">👁 Preview Cases</div>
+            </div>
+          </div>
+          <div class="asset-card-body">
+            <div class="asset-type-badge">📋 PDF · 3–5 Pages</div>
+            <h3>Mini Case Pack</h3>
+            <p>"How Finance Teams Reduce Manual Work by 40–60%" — three representative examples showing the problem,
+              solution, and outcome for reporting automation, budget optimization, and forecast improvement.</p>
+            <div class="asset-card-actions">
+              <button class="btn-download" onclick="event.stopPropagation();handleDownload('mini-case-pack.pdf')">
+                <span class="dl-icon">⬇</span> Preview / Download
+              </button>
+              <span class="upload-status pending"><span class="upload-status-dot"></span> Awaiting your file</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /assets-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════ SERVICES ═══════════ -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-rule"></span>
+        <span class="label reveal">What We Do</span>
+        <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem;max-width:600px">Four Domains of <em
+            style="font-style:italic;color:var(--gold)">Finance Transformation</em></h2>
+      </div>
+      <div class="grid-2" style="margin-top:3rem">
+        <div class="service-card reveal delay-1">
+          <div class="service-icon">📈</div>
+          <h3>Reporting Automation</h3>
+          <p>Eliminate the weekly data scramble. We design and implement automated reporting pipelines that deliver
+            accurate, consistent financial reports — in a fraction of the time.</p>
+          <div class="service-outcomes">
+            <div class="service-outcome">Automated data connections across systems</div>
+            <div class="service-outcome">Standardized reporting templates and formats</div>
+            <div class="service-outcome">Power BI and dashboard implementation</div>
+            <div class="service-outcome">Reporting cycle reduced from days to hours</div>
+          </div>
+          <button class="service-sample-link" onclick="openModal('dashboard')">
+            <span>📈</span> See Dashboard Sample
+          </button>
+        </div>
+        <div class="service-card reveal delay-2">
+          <div class="service-icon">🔭</div>
+          <h3>Forecasting &amp; Planning</h3>
+          <p>Move from static budgets to living forecasts. We build driver-based models that allow scenario analysis,
+            rolling updates, and real-time visibility into your financial trajectory.</p>
+          <div class="service-outcomes">
+            <div class="service-outcome">Driver-based forecasting model design</div>
+            <div class="service-outcome">Scenario and sensitivity analysis</div>
+            <div class="service-outcome">Rolling 12-month forecast frameworks</div>
+            <div class="service-outcome">Variance analysis and exception reporting</div>
+          </div>
+          <button class="service-sample-link" onclick="openModal('forecast')">
+            <span>🔮</span> See Forecast Model Sample
+          </button>
+        </div>
+        <div class="service-card reveal delay-3">
+          <div class="service-icon">🏷️</div>
+          <h3>Budgeting &amp; Fund Tracking</h3>
+          <p>Purpose-built for complex funding environments. We create structured budget frameworks that handle multiple
+            funding streams, grant restrictions, and compliance requirements.</p>
+          <div class="service-outcomes">
+            <div class="service-outcome">Multi-fund budget architecture</div>
+            <div class="service-outcome">Grant utilization tracking and alerts</div>
+            <div class="service-outcome">Donor-ready reporting templates</div>
+            <div class="service-outcome">Audit-ready documentation structures</div>
+          </div>
+          <button class="service-sample-link" onclick="openModal('budget')">
+            <span>📊</span> Download Budget Template
+          </button>
+        </div>
+        <div class="service-card reveal delay-4">
+          <div class="service-icon">🤖</div>
+          <h3>AI Enablement</h3>
+          <p>AI is not a replacement for finance expertise — it's a force multiplier. We identify where AI-assisted
+            workflows can eliminate repetitive work and surface insights faster.</p>
+          <div class="service-outcomes">
+            <div class="service-outcome">AI workflow identification and design</div>
+            <div class="service-outcome">Prompt engineering for finance tasks</div>
+            <div class="service-outcome">AI-assisted variance commentary</div>
+            <div class="service-outcome">Team training on AI tools for finance</div>
+          </div>
+          <button class="service-sample-link" onclick="openModal('report')">
+            <span>📄</span> See AI Opportunity Section in Report
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CASES ═══════════ -->
+  <section class="section cases-section" id="cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-rule"></span>
+        <span class="label reveal">Representative Scenarios</span>
+        <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem;max-width:600px">Finance Transformations in <em
+            style="font-style:italic;color:var(--gold)">Practice</em></h2>
+        <p class="body-lg reveal delay-2" style="margin-top:1rem;max-width:600px">Representative scenarios illustrating
+          the kinds of transformations we design — and the outcomes organizations achieve.</p>
+      </div>
+      <div class="grid-3" style="margin-top:3rem">
+        <div class="case-card reveal delay-1">
+          <div class="case-tag">Non-Profit · Reporting</div>
+          <h3>Reporting Cycle: 5 Days → 1 Day</h3>
+          <p>A mid-size non-profit was spending the first week of every month manually assembling reports from four data
+            sources. Leadership received stale data. Finance team was exhausted.</p>
+          <p style="font-size:0.82rem;color:var(--slate);margin-bottom:0">Solution: Centralized data infrastructure +
+            automated dashboard design.</p>
+          <div class="case-result">Reporting cycle reduced from 5 days to under 1 day</div>
+        </div>
+        <div class="case-card reveal delay-2">
+          <div class="case-tag">Education · Budgeting</div>
+          <h3>Multi-Fund Budget Clarity</h3>
+          <p>An education org managing six funding streams had no clear visibility into how each was tracking vs budget.
+            Year-end surprises were common and costly.</p>
+          <p style="font-size:0.82rem;color:var(--slate);margin-bottom:0">Solution: Structured fund-tracking model with
+            variance reporting and automated alerts.</p>
+          <div class="case-result">Eliminated year-end surprises · Budget accuracy improved 34%</div>
+        </div>
+        <div class="case-card reveal delay-3">
+          <div class="case-tag">Public Sector · Forecasting</div>
+          <h3>Driver-Based Forecasting</h3>
+          <p>A public sector program team lacked forecasting infrastructure to make confident resource allocation
+            decisions. Their annual budget exercise was disconnected from reality.</p>
+          <p style="font-size:0.82rem;color:var(--slate);margin-bottom:0">Solution: Driver-based forecasting model
+            aligned to program-level metrics.</p>
+          <div class="case-result">Leadership made resource decisions with 60% more confidence</div>
+        </div>
+      </div>
+      <div class="case-pack-cta reveal" style="margin-top:2.5rem">
+        <p>Want the full story? The Mini Case Pack includes problem, solution, and outcome narrative for all three
+          scenarios.</p>
+        <button class="btn btn-outline" onclick="openModal('cases')">📋 Download Mini Case Pack (Free)</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ APPROACH ═══════════ -->
+  <section class="section approach-section" id="approach">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-rule"></span>
+        <span class="label reveal">Our Methodology</span>
+        <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem;max-width:600px">A Practical, <em
+            style="font-style:italic;color:var(--gold)">Structured</em> Approach</h2>
+        <p class="body-lg reveal delay-2" style="margin-top:1rem;max-width:560px">Every engagement follows a four-phase
+          process designed for lasting results — not short-term fixes.</p>
+      </div>
+      <div class="approach-steps reveal">
+        <div class="approach-step">
+          <span class="approach-num">01</span>
+          <div class="approach-step-icon">🔍</div>
+          <h3>Diagnose</h3>
+          <p>We spend 60–90 minutes mapping your entire finance operation — every system, every spreadsheet, every
+            manual workaround. We score your reporting, forecasting, data structure and budgeting processes on a 1–5
+            maturity scale. You get a precise picture of what's costing you the most time, and why.</p>
+          <div class="approach-step-tags">
+            <span>Process mapping</span><span>Maturity scoring</span><span>Root cause analysis</span>
+          </div>
+        </div>
+        <div class="approach-step">
+          <span class="approach-num">02</span>
+          <div class="approach-step-icon">📐</div>
+          <h3>Design</h3>
+          <p>Based on your diagnosis, we design the right solution architecture — not a generic template. That means
+            choosing the right reporting structure for your stakeholders, the right forecasting model for your drivers,
+            and identifying exactly where automation and AI create the most leverage without adding complexity.</p>
+          <div class="approach-step-tags">
+            <span>Solution architecture</span><span>AI opportunity mapping</span><span>Quick-win prioritization</span>
+          </div>
+        </div>
+        <div class="approach-step">
+          <span class="approach-num">03</span>
+          <div class="approach-step-icon">⚙️</div>
+          <h3>Implement</h3>
+          <p>We build it — not just recommend it. Models get built. Dashboards get connected. Workflows get automated.
+            Every deliverable is fully working on day one, tested against your real data, and designed so any member of
+            your team can maintain it without a technical background.</p>
+          <div class="approach-step-tags">
+            <span>Power BI dashboards</span><span>Excel / SQL models</span><span>Automated workflows</span>
+          </div>
+        </div>
+        <div class="approach-step">
+          <span class="approach-num">04</span>
+          <div class="approach-step-icon">🎓</div>
+          <h3>Enable</h3>
+          <p>We hand over fully documented systems and train your team to own them independently. Walk-throughs, user
+            guides, recorded sessions — whatever your team needs to stay self-sufficient. The goal is that in 90 days,
+            you don't need us anymore for the things we built.</p>
+          <div class="approach-step-tags">
+            <span>Team training</span><span>Full documentation</span><span>Ongoing advisory option</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ DELIVERABLES ═══════════ -->
+  <section class="section deliverables-section" id="deliverables">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-rule"></span>
+        <span class="label reveal">Tangible Outputs</span>
+        <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem;max-width:640px">What You Actually <em
+            style="font-style:italic;color:var(--gold)">Receive</em></h2>
+        <p class="body-lg reveal delay-2" style="margin-top:1rem;max-width:560px">Every engagement produces concrete,
+          working deliverables — not slide decks. Here's exactly what each phase delivers.</p>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="deliverable-step reveal">
+        <div class="deliverable-step-header">
+          <div class="deliverable-step-num">01</div>
+          <div class="deliverable-step-info">
+            <h3>Discovery Call <span class="step-sub">· 60–90 minutes</span></h3>
+            <p>A structured diagnostic session where we map every system, score your processes on a 1–5 maturity scale,
+              identify your biggest time-drains, and surface specific AI opportunities in your workflows.</p>
+          </div>
+          <div class="deliverable-step-outcome">
+            <div class="dso-label">You receive</div>
+            <div class="dso-name">📄 FP&A Assessment Report</div>
+            <div class="dso-desc">8–12 page PDF covering current-state scoring, root causes, automation opportunities,
+              AI use cases, and a prioritized 30-60-90 day action roadmap.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connector -->
+      <div class="deliverable-connector reveal">
+        <div class="dc-line"></div>
+        <div class="dc-badge">If you choose to proceed with Implementation</div>
+        <div class="dc-line"></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="deliverable-step reveal delay-1">
+        <div class="deliverable-step-header">
+          <div class="deliverable-step-num">02</div>
+          <div class="deliverable-step-info">
+            <h3>Implementation <span class="step-sub">· custom scope &amp; timeline</span></h3>
+            <p>We build every deliverable from scratch against your real data and workflows. Everything below is handed
+              over fully working, tested, documented, and ready for your team to own independently.</p>
+          </div>
+          <div class="deliverable-step-outcome">
+            <div class="dso-label">You receive all six</div>
+            <div class="dso-name">⚙️ Full Process Transformation</div>
+            <div class="dso-desc">Automated systems that replace your manual workflows — permanently.</div>
+          </div>
+        </div>
+        <div class="deliverables-grid" style="margin-top:1.5rem">
+          <div class="deliverable-item">
+            <div class="deliverable-icon">📋</div>
+            <div class="deliverable-text">
+              <h4>Financial Reporting Templates</h4>
+              <p>Structured, standardized report formats tailored for your board, funders, or leadership — no more
+                reformatting every month.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">📊</div>
+            <div class="deliverable-text">
+              <h4>Automated Dashboard Designs</h4>
+              <p>Live Power BI dashboards with direct data connections — leadership sees current numbers without waiting
+                for the finance team.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">🔮</div>
+            <div class="deliverable-text">
+              <h4>Driver-Based Forecasting Models</h4>
+              <p>Excel or BI models built on your real operational drivers — headcount, volumes, grant schedules — not
+                just historical averages.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">💼</div>
+            <div class="deliverable-text">
+              <h4>Budget Tracking Frameworks</h4>
+              <p>Multi-fund structures with real-time variance alerts, utilization tracking, and audit-ready funder
+                reporting views.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">🤖</div>
+            <div class="deliverable-text">
+              <h4>AI Workflow Implementation</h4>
+              <p>Specific AI use cases built and tested — variance commentary, data consolidation, scenario simulation —
+                not just a list of ideas.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">📘</div>
+            <div class="deliverable-text">
+              <h4>Documentation &amp; Team Training</h4>
+              <p>Full written guides, walkthroughs, and recorded sessions so your team maintains everything
+                independently from day one.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="grid-2" style="gap:4rem;align-items:flex-start">
+        <div>
+          <span class="gold-rule"></span>
+          <span class="label reveal">About</span>
+          <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem">Built on Real <em
+              style="font-style:italic;color:var(--gold)">Finance Experience</em></h2>
+          <div class="about-quote reveal delay-2">"Practical over theoretical. Working deliverables over slide decks.
+            Independence over dependency."</div>
+          <p class="body-lg reveal delay-3">With over 10 years working inside finance teams across non-profit,
+            education, public sector, energy, and environmental organizations, I've lived the problems I now help solve
+            — closing books with limited resources, justifying budgets to boards, tracking grant compliance across
+            multiple funding streams, and navigating the reporting demands of mission-driven work.</p>
+          <p class="body-md reveal delay-4" style="margin-top:1.25rem">My background bridges financial planning &amp;
+            analysis, data engineering (SQL, Power BI, Databricks), Oracle ERP systems, and AI workflow design — an
+            uncommon combination that lets me connect finance strategy directly to practical, automated implementation.
+          </p>
+          <div class="about-credentials reveal delay-4">
+            <span class="about-tag">FP&A</span><span class="about-tag">SQL</span><span class="about-tag">Power
+              BI</span><span class="about-tag">Advanced Excel</span><span class="about-tag">Power Query</span><span
+              class="about-tag">Google Sheets</span><span class="about-tag">Databricks</span><span
+              class="about-tag">Oracle ERP</span><span class="about-tag">AI Workflows</span>
+            <span class="about-tag">Non-Profit</span><span class="about-tag">Public Sector</span><span
+              class="about-tag">Education</span><span class="about-tag">Energy</span><span
+              class="about-tag">Environment</span><span class="about-tag">10+ Years</span>
+          </div>
+        </div>
+
+        <!-- Credentials wall -->
+        <div class="reveal delay-2">
+          <div class="cred-wall-header">
+            <span class="label">Certifications &amp; Achievements</span>
+            <div class="cred-wall-line"></div>
+          </div>
+
+          <!-- Category: Cloud & AI -->
+          <div class="cred-category">
+            <div class="cred-cat-label">Cloud &amp; AI</div>
+            <div class="cred-grid">
+              <a href="https://www.credly.com/badges/57d3160b-6072-41a4-ac5c-04eafd860d4c" target="_blank"
+                rel="noopener" class="cred-card">
+                <div class="cred-card-logo aws">AWS</div>
+                <div class="cred-card-text">
+                  <strong>AWS Certified</strong>
+                  <span>Amazon Web Services AI</span>
+                </div>
+                <span class="cred-ext">↗</span>
+              </a>
+              <a href="https://credentials.databricks.com/profile/kiranpaudel493003/wallet" target="_blank"
+                rel="noopener" class="cred-card">
+                <div class="cred-card-logo db">DB</div>
+                <div class="cred-card-text">
+                  <strong>Databricks Certified</strong>
+                  <span>Generative AI Fundamentals</span>
+                </div>
+                <span class="cred-ext">↗</span>
+              </a>
+              <a href="https://credentials.databricks.com/profile/kiranpaudel493003/wallet" target="_blank"
+                rel="noopener" class="cred-card">
+                <div class="cred-card-logo db">DB</div>
+                <div class="cred-card-text">
+                  <strong>Databricks Certified</strong>
+                  <span>Azure Databricks Platform Architect</span>
+                </div>
+                <span class="cred-ext">↗</span>
+              </a>
+              <a href="https://images.credential.net/embed/3x5k1qpv_1745911317267.png" target="_blank" rel="noopener"
+                class="cred-card">
+                <div class="cred-card-logo lss">LSS</div>
+                <div class="cred-card-text">
+                  <strong>Lean Six Sigma</strong>
+                  <span>Process Excellence Certified</span>
+                </div>
+                <span class="cred-ext">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category: Oracle Platform -->
+          <div class="cred-category">
+            <div class="cred-cat-label">Oracle Platform &amp; AI</div>
+            <div class="cred-grid">
+              <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=CB0EF649E036E5611F2FD412314850356BF8C5E9ADB2B67327DE6C948BF46738"
+                target="_blank" rel="noopener" class="cred-card">
+                <div class="cred-card-logo or">Or</div>
+                <div class="cred-card-text"><strong>Oracle Certified</strong><span>Fusion Cloud ERP Process</span></div>
+                <span class="cred-ext">↗</span>
+              </a>
+              <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=53BF4F4B068FABBF1D8D26EECBC9036BDC32D2EF7ACD1B67114BCA7D4DB04BBF"
+                target="_blank" rel="noopener" class="cred-card">
+                <div class="cred-card-logo or">Or</div>
+                <div class="cred-card-text"><strong>Oracle Certified</strong><span>Data Platform Foundations</span>
+                </div>
+                <span class="cred-ext">↗</span>
+              </a>
+              <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=5E14013FE8B3E86D770E7C108A0CD3E6ADDD112F0D74263A879D9F7F5030B74F"
+                target="_blank" rel="noopener" class="cred-card">
+                <div class="cred-card-logo or">Or</div>
+                <div class="cred-card-text"><strong>Oracle Certified</strong><span>Cloud Infrastructure AI
+                    Foundations</span></div>
+                <span class="cred-ext">↗</span>
+              </a>
+              <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=00ECB36441BCDCE8AC9E49ED3FC1184832F3309F5C071EB8FDE3AEC9CA6A544A"
+                target="_blank" rel="noopener" class="cred-card">
+                <div class="cred-card-logo or">Or</div>
+                <div class="cred-card-text"><strong>Oracle Certified</strong><span>Fusion AI Agent Studio</span></div>
+                <span class="cred-ext">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category: Project Management & Analytics -->
+          <div class="cred-category">
+            <div class="cred-cat-label">Project Management &amp; Analytics</div>
+            <div class="cred-grid">
+              <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=C282386B46A6C8C0CB9AFB0DEA9AE4543DAA21D2A5AB1434D9DB0A9D18F9F399"
+                target="_blank" rel="noopener" class="cred-card">
+                <div class="cred-card-logo or">Or</div>
+                <div class="cred-card-text"><strong>Oracle Primavera P6</strong><span>Professional Project
+                    Management</span></div>
+                <span class="cred-ext">↗</span>
+              </a>
+              <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=1B56588A6882AAFE73A205A42635F161BFE5416AF689A9795746672C28409720"
+                target="_blank" rel="noopener" class="cred-card">
+                <div class="cred-card-logo or">Or</div>
+                <div class="cred-card-text"><strong>Oracle Primavera Cloud</strong><span>Portfolio Management</span>
+                </div>
+                <span class="cred-ext">↗</span>
+              </a>
+              <a href="https://www.coursera.org/account/accomplishments/specialization/5XPP2SK044DH" target="_blank"
+                rel="noopener" class="cred-card">
+                <div class="cred-card-logo co">Co</div>
+                <div class="cred-card-text"><strong>BI Essentials — Power BI</strong><span>Finance Analysts
+                    Specialization</span></div>
+                <span class="cred-ext">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Stats row -->
+          <div class="cred-stats-row">
+            <div class="cred-stat"><span class="cred-stat-num">11</span><span
+                class="cred-stat-label">Certifications</span></div>
+            <div class="cred-stat-div"></div>
+            <div class="cred-stat"><span class="cred-stat-num">10+</span><span class="cred-stat-label">Years
+                Experience</span></div>
+            <div class="cred-stat-div"></div>
+            <div class="cred-stat"><span class="cred-stat-num">5</span><span class="cred-stat-label">Sectors
+                Served</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ RESULTS ═══════════ -->
+  <section class="section results-section" id="results">
+    <div class="container">
+      <div class="section-header centered" style="margin-bottom:3rem">
+        <span class="gold-rule center"></span>
+        <span class="label reveal">What Changes</span>
+        <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem">Outcomes That <em
+            style="font-style:italic;color:var(--gold)">Matter</em></h2>
+        <p class="body-lg reveal delay-2" style="margin-top:1rem;max-width:500px;margin-left:auto;margin-right:auto">
+          These aren't aspirational targets — they're the concrete shifts organizations experience within the first 90
+          days.</p>
+      </div>
+      <div class="results-grid">
+        <div class="result-item reveal delay-1">
+          <span class="result-icon">⏱️</span>
+          <span class="result-num">40–60%</span>
+          <div class="result-label">Less time spent<br>on manual data prep</div>
+          <div class="result-context">per month, consistently</div>
+        </div>
+        <div class="result-item reveal delay-2">
+          <span class="result-icon">🚀</span>
+          <span class="result-num">5×</span>
+          <div class="result-label">Faster reporting<br>cycle time</div>
+          <div class="result-context">5 days → under 1 day</div>
+        </div>
+        <div class="result-item reveal delay-3">
+          <span class="result-icon">🎯</span>
+          <span class="result-num">90 days</span>
+          <div class="result-label">To a fully transformed<br>finance function</div>
+          <div class="result-context">from assessment to live systems</div>
+        </div>
+        <div class="result-item reveal delay-4">
+          <span class="result-icon">💡</span>
+          <span class="result-num">100%</span>
+          <div class="result-label">Team ownership<br>of every system built</div>
+          <div class="result-context">no ongoing dependency on us</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ OFFER ═══════════ -->
+  <section class="section offer-section" id="offer">
+    <div class="container">
+      <div class="section-header centered" style="margin-bottom:3rem">
+        <span class="gold-rule center"></span>
+        <span class="label reveal">Entry Offer</span>
+        <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem">Start with a <em
+            style="font-style:italic;color:var(--gold)">Focused Assessment</em></h2>
+        <p class="body-lg reveal delay-2" style="margin-top:1rem;max-width:560px;margin-left:auto;margin-right:auto">The
+          lowest-risk way to begin. Walk away with a clear picture of exactly what to fix — and where AI can help.</p>
+      </div>
+      <div class="offer-card reveal">
+        <div class="offer-badge">⭐ Most Popular Starting Point</div>
+        <div class="offer-grid">
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:600;margin-bottom:1.5rem">FP&A
+              Process Assessment &amp; Optimization Report</h3>
+            <ul class="offer-includes">
+              <li>60-minute discovery call to map your current finance environment</li>
+              <li>Deep-dive review of reporting, budgeting, forecasting, and data structures</li>
+              <li>Custom PDF report: current gaps, efficiency score, key risks</li>
+              <li>AI use case identification specific to your workflows</li>
+              <li>Priority roadmap: 30-60-90 day action plan</li>
+              <li>Automation opportunities clearly mapped and prioritized</li>
+              <li>Optional: mini dashboard mock or starter template included</li>
+            </ul>
+            <!-- Sample report link inside offer -->
+            <div class="offer-sample-row" onclick="openModal('report')" style="margin-top:1.5rem">
+              <span class="offer-sample-row-icon">📄</span>
+              <div class="offer-sample-row-text">
+                <strong>See a sample of what you'll receive</strong>
+                <span>Preview the FP&A Assessment Report structure →</span>
+              </div>
+              <span style="color:var(--gold);font-size:0.9rem">↗</span>
+            </div>
+            <div
+              style="margin-top:1.25rem;padding:1.25rem 1.5rem;background:var(--navy);border:1px solid rgba(78,173,124,0.2);border-radius:8px">
+              <p style="font-size:0.85rem;color:var(--green-soft);line-height:1.6"><strong>You leave knowing:</strong>
+                What's broken · What to fix first · Where AI actually helps · How to move forward confidently</p>
+            </div>
+          </div>
+          <div>
+            <div class="offer-price-box">
+              <div class="offer-price">$250</div>
+              <div class="offer-price-note">Introductory rate · Later scales to $500–$1,000+</div>
+              <a href="#contact" class="btn btn-primary"
+                style="width:100%;justify-content:center;margin-bottom:0.75rem"><span>Book Your Assessment →</span></a>
+              <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center">Schedule a Free Call
+                First</a>
+            </div>
+            <div class="offer-upgrade">
+              <p>After the assessment, organizations typically continue with:</p>
+              <p style="margin-top:0.5rem"><strong>Implementation</strong> → $2,000–$10,000+</p>
+              <p><strong>Ongoing Advisory</strong> → Monthly retainer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ RESOURCES / DOWNLOADS HUB ═══════════ -->
+  <section class="section resources-section" id="resources">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-rule"></span>
+        <span class="label reveal">Resource Hub</span>
+        <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem;max-width:600px">Downloads &amp; <em
+            style="font-style:italic;color:var(--gold)">Free Resources</em></h2>
+        <p class="body-lg reveal delay-2" style="margin-top:1rem;max-width:560px">Everything you need to evaluate our
+          work, use our templates, and get started — before spending a dollar.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div style="display:flex;gap:0;margin-bottom:2.5rem" class="reveal">
+        <div class="resources-tabs">
+          <button class="resources-tab active" data-tab="downloads">📥 Downloads</button>
+          <button class="resources-tab" data-tab="checklist">✅ Free Checklist</button>
+        </div>
+      </div>
+
+      <!-- Downloads Tab -->
+      <div class="resources-tab-content active" id="tab-downloads">
+        <div class="upload-notice reveal">
+          <span>📌</span>
+          <span>Files marked <strong>"Awaiting upload"</strong> will be activated once you upload your documents. Click
+            any card to preview the structure, then replace with your real file.</span>
+        </div>
+        <div class="downloads-grid reveal">
+          <div class="download-card">
+            <div class="download-card-header">
+              <div class="download-file-icon pdf">PDF</div>
+              <div>
+                <h4>FP&A Assessment Report (Sample)</h4>
+                <p>8–12 page sample showing exactly what clients receive after their assessment engagement.</p>
+              </div>
+            </div>
+            <div class="download-card-footer">
+              <span class="download-meta">PDF · ~2 MB</span>
+              <div style="display:flex;gap:0.5rem;align-items:center">
+                <span class="upload-status pending"><span class="upload-status-dot"></span> Awaiting upload</span>
+                <button class="btn-download" onclick="openModal('report')">👁 Preview</button>
+              </div>
+            </div>
+          </div>
+          <div class="download-card">
+            <div class="download-card-header">
+              <div class="download-file-icon xlsx">XLSX</div>
+              <div>
+                <h4>Non-Profit Budget Template</h4>
+                <p>4-tab Excel workbook with summary, fund-level tracking, expense categories, and monthly forecast.</p>
+              </div>
+            </div>
+            <div class="download-card-footer">
+              <span class="download-meta">Excel · ~350 KB</span>
+              <div style="display:flex;gap:0.5rem;align-items:center">
+                <span class="upload-status pending"><span class="upload-status-dot"></span> Awaiting upload</span>
+                <button class="btn-download" onclick="openModal('budget')">👁 Preview</button>
+              </div>
+            </div>
+          </div>
+          <div class="download-card">
+            <div class="download-card-header">
+              <div class="download-file-icon pdf">PDF</div>
+              <div>
+                <h4>Finance Dashboard Mockup</h4>
+                <p>Power BI-style dashboard visual showing budget vs actual, fund utilization, and forecast trends.</p>
+              </div>
+            </div>
+            <div class="download-card-footer">
+              <span class="download-meta">PDF · ~1.5 MB</span>
+              <div style="display:flex;gap:0.5rem;align-items:center">
+                <span class="upload-status pending"><span class="upload-status-dot"></span> Awaiting upload</span>
+                <button class="btn-download" onclick="openModal('dashboard')">👁 Preview</button>
+              </div>
+            </div>
+          </div>
+          <div class="download-card">
+            <div class="download-card-header">
+              <div class="download-file-icon xlsx">XLSX</div>
+              <div>
+                <h4>Driver-Based Forecast Model</h4>
+                <p>Structured Excel model with revenue drivers, expense drivers, and 3-scenario toggle.</p>
+              </div>
+            </div>
+            <div class="download-card-footer">
+              <span class="download-meta">Excel · ~280 KB</span>
+              <div style="display:flex;gap:0.5rem;align-items:center">
+                <span class="upload-status pending"><span class="upload-status-dot"></span> Awaiting upload</span>
+                <button class="btn-download" onclick="openModal('forecast')">👁 Preview</button>
+              </div>
+            </div>
+          </div>
+          <div class="download-card">
+            <div class="download-card-header">
+              <div class="download-file-icon pdf">PDF</div>
+              <div>
+                <h4>Mini Case Pack</h4>
+                <p>"How Finance Teams Reduce Manual Work by 40–60%" — three representative scenarios, full story.</p>
+              </div>
+            </div>
+            <div class="download-card-footer">
+              <span class="download-meta">PDF · ~800 KB</span>
+              <div style="display:flex;gap:0.5rem;align-items:center">
+                <span class="upload-status pending"><span class="upload-status-dot"></span> Awaiting upload</span>
+                <button class="btn-download" onclick="openModal('cases')">👁 Preview</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checklist Tab -->
+      <div class="resources-tab-content" id="tab-checklist">
+        <div class="magnet-form-card reveal">
+          <div>
+            <span class="label" style="display:block;margin-bottom:0.75rem">Free Download</span>
+            <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:600;margin-bottom:1rem">Finance
+              Process Self-Assessment Checklist</h3>
+            <p style="font-size:0.9rem;color:var(--slate-light);line-height:1.7;margin-bottom:1.5rem">15 diagnostic
+              questions that reveal exactly where your finance processes are breaking down — with a scorecard and
+              immediate action steps per score range.</p>
+            <div class="magnet-checklist">
+              <div class="magnet-check-item">
+                <div class="magnet-check-box">✓</div> How long does your monthly close take?
+              </div>
+              <div class="magnet-check-item">
+                <div class="magnet-check-box">✓</div> Do you have a single source of financial truth?
+              </div>
+              <div class="magnet-check-item">
+                <div class="magnet-check-box" style="border-color:var(--slate);background:transparent"></div> Is your
+                forecast updated at least quarterly?
+              </div>
+              <div class="magnet-check-item">
+                <div class="magnet-check-box" style="border-color:var(--slate);background:transparent"></div> Can
+                leadership self-serve financial data?
+              </div>
+              <div class="magnet-check-item">
+                <div class="magnet-check-box" style="border-color:var(--slate);background:transparent"></div> Are grant
+                balances tracked in real-time?
+              </div>
+              <div
+                style="font-size:0.72rem;color:var(--slate);margin-top:0.5rem;font-family:var(--font-mono);letter-spacing:0.06em">
+                + 10 MORE QUESTIONS IN THE FULL CHECKLIST...</div>
+            </div>
+          </div>
+          <div>
+            <div
+              style="background:var(--navy-card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1.5rem">
+              <div
+                style="font-size:0.7rem;color:var(--gold);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem">
+                Sample Scorecard</div>
+              <div
+                style="font-family:var(--font-display);font-size:2.5rem;font-weight:600;color:var(--gold);margin-bottom:0.25rem">
+                58%</div>
+              <div style="font-size:0.75rem;color:var(--slate-light);margin-bottom:1rem">Finance Process Efficiency
+                Score</div>
+              <div style="height:6px;background:var(--navy-light);border-radius:3px;margin-bottom:0.5rem">
+                <div
+                  style="width:58%;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light))">
+                </div>
+              </div>
+              <div style="font-size:0.72rem;color:var(--slate)">Score range: 0–40 (High Risk) · 40–70 (Moderate) ·
+                70–100 (Optimized)</div>
+            </div>
+            <div class="magnet-form">
+              <div class="form-row">
+                <input type="text" class="form-input" placeholder="Your name" />
+                <input type="text" class="form-input" placeholder="Organization" />
+              </div>
+              <input type="email" class="form-input" placeholder="Work email address" />
+              <button class="btn btn-primary" style="align-self:flex-start"><span>📥 Preview / Request
+                  Checklist</span></button>
+              <p class="form-note">No spam. Unsubscribe anytime. Your information is kept private.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ FINAL CTA ═══════════ -->
+  <section class="final-cta" id="contact">
+    <div class="container">
+      <span class="gold-rule center reveal"></span>
+      <span class="label reveal">Let's Talk</span>
+      <h2 class="display-lg reveal delay-1" style="margin-top:0.75rem">Ready to Transform Your<br><em
+          style="font-style:italic;color:var(--gold)">Finance Function?</em></h2>
+      <p class="reveal delay-2">Book a free 30-minute call to explore whether we're the right fit — no commitment, no
+        pressure, just a clear conversation about where you are and where you could be.</p>
+      <div class="btn-group reveal delay-3">
+        <a href="/cdn-cgi/l/email-protection#6d05080101022d0e010c1f0419140b1d0c430e0200" class="btn btn-primary"
+          style="font-size:1rem;padding:1rem 2.5rem"><span>📅 Book Free FP&A Assessment</span></a>
+        <a href="#offer" class="btn btn-outline" style="font-size:1rem;padding:1rem 2.5rem">View the $250 Offer →</a>
+      </div>
+      <p class="reveal delay-4" style="margin-top:2rem;font-size:0.8rem;color:var(--slate)">Typically responds within 1
+        business day · Based in Canada · Available globally (remote)</p>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="consultingLogo.png" alt="Clarity FP&A Logo" class="nav-logo-img"></div>
+          <p class="footer-tagline">Financial Planning &amp; Analysis consulting for non-profits, education, and public
+            sector organizations. Structured systems. Practical results.</p>
+          <div class="footer-socials" style="margin-top:1.5rem">
+            <a href="#" class="footer-social">in</a>
+            <a href="#" class="footer-social">𝕏</a>
+            <a href="#" class="footer-social">✉</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Reporting Automation</a></li>
+            <li><a href="#services">Forecasting &amp; Planning</a></li>
+            <li><a href="#services">Budget &amp; Fund Tracking</a></li>
+            <li><a href="#services">AI Enablement</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#trust-stack" onclick="openModal('report')">Assessment Report Sample</a></li>
+            <li><a href="#trust-stack" onclick="openModal('budget')">Budget Template</a></li>
+            <li><a href="#trust-stack" onclick="openModal('forecast')">Forecast Model</a></li>
+            <li><a href="#trust-stack" onclick="openModal('cases')">Mini Case Pack</a></li>
+            <li><a href="#resources">Free Checklist</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Started</h4>
+          <ul class="footer-links">
+            <li><a href="#contact">Book Free Call</a></li>
+            <li><a href="#offer">View $250 Offer</a></li>
+            <li><a href="#cases">Case Studies</a></li>
+            <li><a href="/cdn-cgi/l/email-protection#056d6069696a45666964776c717c6375642b666a68">Email Directly</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 ClarityFP&A. All rights reserved.</span>
+        <span>Cambridge, Ontario · Remote-first · Available globally</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════
+     MODALS
+════════════════════════════════════════════════════════ -->
+
+  <!-- Modal: FP&A Assessment Report Preview -->
+  <div class="modal-overlay" id="modal-report">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <span class="label" style="display:block;margin-bottom:0.3rem">Sample Preview</span>
+          <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--cream)">FP&A Process
+            Assessment Report</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('report')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="upload-notice">
+          <span>📌</span>
+          <span>This is a <strong>structural preview</strong> of the report format. Upload your completed PDF to
+            activate the download button and replace this preview.</span>
+        </div>
+        <!-- Cover -->
+        <div class="report-cover">
+          <div
+            style="display:inline-block;background:var(--gold-dim);border:1px solid var(--border);border-radius:4px;padding:0.25rem 0.75rem;font-size:0.7rem;font-family:var(--font-mono);color:var(--gold);letter-spacing:0.1em;margin-bottom:1.25rem">
+            SAMPLE DOCUMENT</div>
+          <div class="report-cover-title">FP&A Process Assessment Report</div>
+          <div class="report-cover-sub">Reporting, Budgeting &amp; Forecast Optimization</div>
+          <div
+            style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;background:var(--navy-card);border:1px solid var(--border);border-radius:999px;font-size:0.75rem;color:var(--slate)">
+            <span>Prepared by</span> <strong style="color:var(--cream)">ClarityFP&A</strong>
+          </div>
+        </div>
+        <!-- TOC -->
+        <h4
+          style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:1rem;color:var(--slate-light)">
+          Table of Contents</h4>
+        <div class="report-toc">
+          <div class="report-toc-item">
+            <div class="report-toc-num">1</div>
+            <div class="report-toc-label">Executive Summary &amp; Maturity Score</div>
+            <div class="report-toc-pages">pp. 2–3</div>
+          </div>
+          <div class="report-toc-item">
+            <div class="report-toc-num">2</div>
+            <div class="report-toc-label">Current State Analysis (Reporting)</div>
+            <div class="report-toc-pages">pp. 4</div>
+          </div>
+          <div class="report-toc-item">
+            <div class="report-toc-num">3</div>
+            <div class="report-toc-label">Current State Analysis (Budgeting &amp; Forecasting)</div>
+            <div class="report-toc-pages">pp. 5</div>
+          </div>
+          <div class="report-toc-item">
+            <div class="report-toc-num">4</div>
+            <div class="report-toc-label">Key Pain Points &amp; Risk Areas</div>
+            <div class="report-toc-pages">pp. 6</div>
+          </div>
+          <div class="report-toc-item">
+            <div class="report-toc-num">5</div>
+            <div class="report-toc-label">Opportunity Areas &amp; Quick Wins</div>
+            <div class="report-toc-pages">pp. 7</div>
+          </div>
+          <div class="report-toc-item">
+            <div class="report-toc-num">6</div>
+            <div class="report-toc-label">AI Opportunities (Specific to Your Workflows)</div>
+            <div class="report-toc-pages">pp. 8</div>
+          </div>
+          <div class="report-toc-item">
+            <div class="report-toc-num">7</div>
+            <div class="report-toc-label">Priority Roadmap: 30-60-90 Days</div>
+            <div class="report-toc-pages">pp. 9–10</div>
+          </div>
+          <div class="report-toc-item">
+            <div class="report-toc-num">8</div>
+            <div class="report-toc-label">Expected Outcomes &amp; Next Steps</div>
+            <div class="report-toc-pages">pp. 11–12</div>
+          </div>
+        </div>
+        <!-- Maturity scoring -->
+        <div class="report-section-preview">
+          <h4>Section 1 Preview: Maturity Score (1–5 Rating Scale)</h4>
+          <div class="maturity-row">
+            <div class="maturity-label">Reporting Process</div>
+            <div class="maturity-bar">
+              <div class="maturity-fill" style="width:40%"></div>
+            </div>
+            <div class="maturity-score">2/5</div>
+          </div>
+          <div class="maturity-row">
+            <div class="maturity-label">Budgeting Process</div>
+            <div class="maturity-bar">
+              <div class="maturity-fill" style="width:60%"></div>
+            </div>
+            <div class="maturity-score">3/5</div>
+          </div>
+          <div class="maturity-row">
+            <div class="maturity-label">Forecasting</div>
+            <div class="maturity-bar">
+              <div class="maturity-fill" style="width:25%"></div>
+            </div>
+            <div class="maturity-score">1.5/5</div>
+          </div>
+          <div class="maturity-row">
+            <div class="maturity-label">Data Structure</div>
+            <div class="maturity-bar">
+              <div class="maturity-fill" style="width:50%"></div>
+            </div>
+            <div class="maturity-score">2.5/5</div>
+          </div>
+          <div
+            style="margin-top:1rem;padding:0.75rem 1rem;background:var(--navy-card);border-radius:6px;font-size:0.8rem;color:var(--slate-light)">
+            Overall Maturity Level: <strong style="color:var(--gold)">Low–Medium</strong> · Significant optimization
+            opportunity identified</div>
+        </div>
+        <!-- AI Opportunities -->
+        <div class="report-section-preview">
+          <h4>Section 6 Preview: AI Opportunity Areas</h4>
+          <div class="ai-opportunity">
+            <div class="ai-opp-icon">🤖</div>
+            <div class="ai-opp-text"><strong>Automated Data Consolidation</strong><span>Replace 4-hour manual data pull
+                with AI-assisted pipeline — estimated 80% time reduction.</span></div>
+          </div>
+          <div class="ai-opportunity">
+            <div class="ai-opp-icon">💬</div>
+            <div class="ai-opp-text"><strong>Variance Explanation Using AI</strong><span>Auto-generate narrative
+                commentary on budget variances using structured prompts — saves 2–3 hrs/month.</span></div>
+          </div>
+          <div class="ai-opportunity">
+            <div class="ai-opp-icon">🔮</div>
+            <div class="ai-opp-text"><strong>Forecast Scenario Simulation</strong><span>Use AI to rapidly model impact
+                of assumption changes across 3 scenarios.</span></div>
+          </div>
+        </div>
+        <!-- Roadmap -->
+        <div class="report-section-preview">
+          <h4>Section 7 Preview: 30-60-90 Day Priority Roadmap</h4>
+          <table class="roadmap-table">
+            <thead>
+              <tr>
+                <th>Timeline</th>
+                <th>Priority Action</th>
+                <th>Expected Outcome</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="roadmap-day d30">30 Days</span></td>
+                <td>Reporting process cleanup + data source mapping</td>
+                <td>Clarity on current state, quick wins identified</td>
+              </tr>
+              <tr>
+                <td><span class="roadmap-day d60">60 Days</span></td>
+                <td>Dashboard setup + automated data connections</td>
+                <td>Reporting cycle reduced by 60–80%</td>
+              </tr>
+              <tr>
+                <td><span class="roadmap-day d90">90 Days</span></td>
+                <td>Driver-based forecast model + team training</td>
+                <td>Live forecasting capability, team self-sufficient</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline btn-sm" onclick="closeModal('report')">Close Preview</button>
+        <button class="btn-download" onclick="handleDownload('fpa-assessment-sample.pdf')"><span
+            class="dl-icon">⬇</span> Preview / Download (PDF)</button>
+        <a href="#contact" class="btn btn-primary btn-sm" onclick="closeModal('report')"><span>Book Your Real Assessment
+            →</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Budget Template -->
+  <div class="modal-overlay" id="modal-budget">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <span class="label" style="display:block;margin-bottom:0.3rem">Template Preview</span>
+          <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--cream)">Non-Profit
+            Budget Template</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('budget')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="upload-notice"><span>📌</span><span>Upload your Excel/Google Sheets file to activate the download
+            button.</span></div>
+        <p class="body-md" style="margin-bottom:2rem">A structured 4-tab workbook designed specifically for non-profit
+          finance environments with multiple funding streams, grant tracking requirements, and board-ready reporting
+          needs.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:2rem">
+          <div class="report-section-preview" style="margin-bottom:0">
+            <h4 style="color:var(--gold);margin-bottom:0.75rem">📋 Tab 1: Summary Dashboard</h4>
+            <div style="font-size:0.8rem;color:var(--slate-light);display:flex;flex-direction:column;gap:0.4rem">
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Total budget vs actual (YTD)</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Variance amount &amp; percentage</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Executive summary view</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Auto-populated from other tabs</div>
+            </div>
+          </div>
+          <div class="report-section-preview" style="margin-bottom:0">
+            <h4 style="color:var(--gold);margin-bottom:0.75rem">🏷️ Tab 2: Fund-Level Budget</h4>
+            <div style="font-size:0.8rem;color:var(--slate-light);display:flex;flex-direction:column;gap:0.4rem">
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Fund | Budget | Actual | Variance</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Color-coded variance alerts</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Multiple funding streams</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Grant utilization %</div>
+            </div>
+          </div>
+          <div class="report-section-preview" style="margin-bottom:0">
+            <h4 style="color:var(--gold);margin-bottom:0.75rem">💼 Tab 3: Expense Categories</h4>
+            <div style="font-size:0.8rem;color:var(--slate-light);display:flex;flex-direction:column;gap:0.4rem">
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Program costs breakdown</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Administrative costs</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Salaries by department</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Category vs budget tracking</div>
+            </div>
+          </div>
+          <div class="report-section-preview" style="margin-bottom:0">
+            <h4 style="color:var(--gold);margin-bottom:0.75rem">🔮 Tab 4: Forecast</h4>
+            <div style="font-size:0.8rem;color:var(--slate-light);display:flex;flex-direction:column;gap:0.4rem">
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Monthly projections (12-month)</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Actuals + forecast combined</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Year-end projected total</div>
+              <div style="display:flex;align-items:center;gap:0.5rem"><span style="color:var(--green-soft)">◆</span>
+                Variance to original budget</div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="padding:1.25rem;background:var(--navy-card);border:1px solid var(--border);border-radius:8px;font-size:0.82rem;color:var(--slate-light);display:flex;gap:0.75rem;align-items:center">
+          <span style="font-size:1.2rem">✅</span>
+          <span>Clean design · Color-coded alerts · Simple formulas · No macro dependencies · Works in Excel &amp;
+            Google Sheets</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline btn-sm" onclick="closeModal('budget')">Close</button>
+        <button class="btn-download" onclick="handleDownload('nonprofit-budget-template.xlsx')"><span
+            class="dl-icon">⬇</span> Preview / Download (XLSX)</button>
+        <a href="#contact" class="btn btn-primary btn-sm" onclick="closeModal('budget')"><span>Book Assessment
+            →</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Dashboard -->
+  <div class="modal-overlay" id="modal-dashboard">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <span class="label" style="display:block;margin-bottom:0.3rem">Visual Preview</span>
+          <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--cream)">Finance
+            Dashboard Mockup</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('dashboard')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="upload-notice"><span>📌</span><span>Upload your Power BI screenshot or PDF mockup to replace this
+            preview. Label: "Sample Dashboard for Non-Profit Finance Teams".</span></div>
+        <p class="body-md" style="margin-bottom:2rem">A Power BI-style dashboard designed for non-profit finance
+          leadership. Four visual panels that give a complete picture of organizational financial health at a glance.
+        </p>
+        <!-- Expanded dashboard mockup -->
+        <div
+          style="background:var(--navy-mid);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:2rem">
+          <div
+            style="background:var(--navy-light);padding:0.85rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+            <span style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--cream)">Sample
+              Dashboard for Non-Profit Finance Teams</span>
+            <span style="font-size:0.7rem;color:var(--gold);font-family:var(--font-mono);letter-spacing:0.1em">FY 2025 ·
+              LIVE DATA</span>
+          </div>
+          <div style="padding:1.5rem">
+            <div class="dash-kpis" style="grid-template-columns:repeat(4,1fr);margin-bottom:1.5rem">
+              <div class="dash-kpi">
+                <div class="dash-kpi-label">Total Budget</div>
+                <div class="dash-kpi-val">$4.2M <span>↑ 12%</span></div>
+              </div>
+              <div class="dash-kpi">
+                <div class="dash-kpi-label">YTD Actual</div>
+                <div class="dash-kpi-val">$2.8M <span>✓</span></div>
+              </div>
+              <div class="dash-kpi">
+                <div class="dash-kpi-label">YTD Variance</div>
+                <div class="dash-kpi-val">-3.1% <span class="neg">▼</span></div>
+              </div>
+              <div class="dash-kpi">
+                <div class="dash-kpi-label">Grant Utilization</div>
+                <div class="dash-kpi-val">87% <span>✓</span></div>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:2fr 1fr;gap:1rem;margin-bottom:1rem">
+              <div class="dash-chart-area">
+                <div class="dash-chart-label">Budget vs Actual — Monthly Trend</div>
+                <div class="dash-bars" style="height:90px;gap:8px">
+                  <div class="dash-bar" style="height:45%"></div>
+                  <div class="dash-bar active" style="height:52%"></div>
+                  <div class="dash-bar" style="height:38%"></div>
+                  <div class="dash-bar active" style="height:71%"></div>
+                  <div class="dash-bar" style="height:63%"></div>
+                  <div class="dash-bar active" style="height:78%"></div>
+                  <div class="dash-bar highlight" style="height:91%"></div>
+                  <div class="dash-bar active" style="height:75%"></div>
+                  <div class="dash-bar" style="height:68%"></div>
+                </div>
+              </div>
+              <div class="dash-mini">
+                <div class="dash-mini-label">Fund Utilization</div>
+                <div class="dash-progress">
+                  <div class="dash-progress-fill" style="width:87%"></div>
+                </div>
+                <div class="dash-progress-row"><span>Grant A</span><span style="color:var(--gold)">87%</span></div>
+                <div class="dash-progress" style="margin-top:6px">
+                  <div class="dash-progress-fill" style="width:62%;background:var(--green-soft)"></div>
+                </div>
+                <div class="dash-progress-row"><span>Grant B</span><span style="color:var(--green-soft)">62%</span>
+                </div>
+                <div class="dash-progress" style="margin-top:6px">
+                  <div class="dash-progress-fill" style="width:45%;background:var(--slate)"></div>
+                </div>
+                <div class="dash-progress-row"><span>General</span><span style="color:var(--slate)">45%</span></div>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+              <div class="dash-mini">
+                <div class="dash-mini-label">Expense Breakdown</div>
+                <div style="display:flex;flex-direction:column;gap:5px;margin-top:4px">
+                  <div style="display:flex;align-items:center;gap:8px;font-size:0.72rem;color:var(--slate-light)">
+                    <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0"></div><span
+                      style="flex:1">Program Costs</span><span style="color:var(--gold)">54%</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:0.72rem;color:var(--slate-light)">
+                    <div style="width:8px;height:8px;border-radius:50%;background:var(--green-soft);flex-shrink:0">
+                    </div><span style="flex:1">Salaries</span><span style="color:var(--green-soft)">28%</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:0.72rem;color:var(--slate-light)">
+                    <div style="width:8px;height:8px;border-radius:50%;background:var(--slate);flex-shrink:0"></div>
+                    <span style="flex:1">Admin &amp; Overhead</span><span style="color:var(--slate)">18%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="dash-mini">
+                <div class="dash-mini-label">Forecast Trend (to Year-End)</div>
+                <div
+                  style="font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--green-soft);margin-bottom:0.25rem">
+                  $4.05M</div>
+                <div style="font-size:0.7rem;color:var(--slate)">Projected Year-End Actual</div>
+                <div style="font-size:0.72rem;color:var(--gold);margin-top:0.5rem">$150K under budget · On track</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline btn-sm" onclick="closeModal('dashboard')">Close</button>
+        <button class="btn-download" onclick="handleDownload('dashboard-mockup.pdf')"><span class="dl-icon">⬇</span>
+          Preview / Download (PDF)</button>
+        <a href="#contact" class="btn btn-primary btn-sm" onclick="closeModal('dashboard')"><span>Book Assessment
+            →</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Forecast Model -->
+  <div class="modal-overlay" id="modal-forecast">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <span class="label" style="display:block;margin-bottom:0.3rem">Model Preview</span>
+          <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--cream)">Driver-Based
+            Forecast Model</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('forecast')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="upload-notice"><span>📌</span><span>Upload your Excel forecast model to activate the download. The
+            preview below illustrates the model structure.</span></div>
+        <p class="body-md" style="margin-bottom:2rem">A structured Excel forecasting model that ties projections to real
+          operational drivers rather than historical averages. Includes a three-scenario toggle for leadership decision
+          support.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2rem">
+          <div class="report-section-preview" style="margin-bottom:0">
+            <h4 style="color:var(--gold);margin-bottom:0.75rem;font-size:0.95rem">📊 Revenue Drivers</h4>
+            <div style="font-size:0.78rem;color:var(--slate-light);display:flex;flex-direction:column;gap:0.35rem">
+              <div>◆ Grant income by funder</div>
+              <div>◆ Program fee revenue</div>
+              <div>◆ Donation projections</div>
+              <div>◆ Government transfers</div>
+            </div>
+          </div>
+          <div class="report-section-preview" style="margin-bottom:0">
+            <h4 style="color:var(--gold);margin-bottom:0.75rem;font-size:0.95rem">💼 Expense Drivers</h4>
+            <div style="font-size:0.78rem;color:var(--slate-light);display:flex;flex-direction:column;gap:0.35rem">
+              <div>◆ Headcount × avg salary</div>
+              <div>◆ Program delivery costs</div>
+              <div>◆ Overhead allocation %</div>
+              <div>◆ Capital expenditure plan</div>
+            </div>
+          </div>
+          <div class="report-section-preview" style="margin-bottom:0">
+            <h4 style="color:var(--gold);margin-bottom:0.75rem;font-size:0.95rem">🔀 Scenario Toggle</h4>
+            <div style="display:flex;flex-direction:column;gap:0.5rem">
+              <div
+                style="padding:0.4rem 0.7rem;background:rgba(78,173,124,0.1);border:1px solid rgba(78,173,124,0.25);border-radius:4px;font-size:0.75rem;color:var(--green-soft)">
+                BASE CASE · Most likely</div>
+              <div
+                style="padding:0.4rem 0.7rem;background:rgba(201,168,76,0.1);border:1px solid var(--border);border-radius:4px;font-size:0.75rem;color:var(--gold)">
+                BEST CASE · Upside scenario</div>
+              <div
+                style="padding:0.4rem 0.7rem;background:rgba(212,78,78,0.1);border:1px solid rgba(212,78,78,0.25);border-radius:4px;font-size:0.75rem;color:var(--red-soft)">
+                WORST CASE · Risk scenario</div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="padding:1.25rem;background:var(--navy-card);border:1px solid rgba(201,168,76,0.2);border-radius:8px;font-size:0.82rem;color:var(--cream-dim);display:flex;gap:0.75rem;align-items:flex-start">
+          <span style="font-size:1.2rem;flex-shrink:0">💡</span>
+          <span>This is <strong style="color:var(--gold-light)">structured thinking</strong>, not just spreadsheet
+            arithmetic. Each driver is documented, assumptions are transparent, and any team member can update the model
+            without breaking it.</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline btn-sm" onclick="closeModal('forecast')">Close</button>
+        <button class="btn-download" onclick="handleDownload('forecast-model.xlsx')"><span class="dl-icon">⬇</span>
+          Preview / Download (XLSX)</button>
+        <a href="#contact" class="btn btn-primary btn-sm" onclick="closeModal('forecast')"><span>Book Assessment
+            →</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Mini Case Pack -->
+  <div class="modal-overlay" id="modal-cases">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <span class="label" style="display:block;margin-bottom:0.3rem">Case Pack Preview</span>
+          <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--cream)">Mini Case Pack
+          </h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('cases')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="upload-notice"><span>📌</span><span>Upload your PDF case pack to activate the download button.
+            Preview structure is shown below.</span></div>
+        <div
+          style="text-align:center;padding:1.5rem;background:var(--navy);border:1px solid var(--border);border-radius:10px;margin-bottom:2rem">
+          <div class="report-cover-title" style="font-size:1.3rem;margin-bottom:0.4rem">"How Finance Teams Reduce Manual
+            Work by 40–60%"</div>
+          <div style="font-size:0.82rem;color:var(--slate)">3 Representative Examples · Problem · Solution · Outcome
+          </div>
+        </div>
+        <!-- Case 1 -->
+        <div class="report-section-preview">
+          <div class="case-tag" style="margin-bottom:1rem">Case 1 · Non-Profit · Reporting Automation</div>
+          <h4 style="margin-bottom:1rem">Reporting Cycle: 5 Days → 1 Day</h4>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem">
+            <div
+              style="background:var(--navy-card);border:1px solid rgba(212,78,78,0.2);border-radius:6px;padding:0.9rem">
+              <div
+                style="font-size:0.65rem;color:var(--red-soft);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem">
+                Problem</div>
+              <div style="font-size:0.78rem;color:var(--slate-light)">Manual data pull from 4 systems each month. 5 full
+                business days to produce finance report.</div>
+            </div>
+            <div style="background:var(--navy-card);border:1px solid var(--border);border-radius:6px;padding:0.9rem">
+              <div
+                style="font-size:0.65rem;color:var(--gold);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem">
+                Solution</div>
+              <div style="font-size:0.78rem;color:var(--slate-light)">Centralized data source + automated Power BI
+                dashboard with live connections.</div>
+            </div>
+            <div
+              style="background:var(--navy-card);border:1px solid rgba(78,173,124,0.2);border-radius:6px;padding:0.9rem">
+              <div
+                style="font-size:0.65rem;color:var(--green-soft);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem">
+                Outcome</div>
+              <div style="font-size:0.78rem;color:var(--slate-light)">Reporting cycle dropped to under 1 day. Finance
+                team recovered 4 days/month of capacity.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Case 2 -->
+        <div class="report-section-preview">
+          <div class="case-tag"
+            style="background:rgba(78,173,124,0.1);border-color:rgba(78,173,124,0.25);color:var(--green-soft);margin-bottom:1rem">
+            Case 2 · Education · Budget Optimization</div>
+          <h4 style="margin-bottom:1rem">Multi-Fund Clarity &amp; Variance Control</h4>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem">
+            <div
+              style="background:var(--navy-card);border:1px solid rgba(212,78,78,0.2);border-radius:6px;padding:0.9rem">
+              <div
+                style="font-size:0.65rem;color:var(--red-soft);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem">
+                Problem</div>
+              <div style="font-size:0.78rem;color:var(--slate-light)">6 funding streams tracked in separate
+                spreadsheets. Year-end surprises were frequent.</div>
+            </div>
+            <div style="background:var(--navy-card);border:1px solid var(--border);border-radius:6px;padding:0.9rem">
+              <div
+                style="font-size:0.65rem;color:var(--gold);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem">
+                Solution</div>
+              <div style="font-size:0.78rem;color:var(--slate-light)">Structured multi-fund budget template with
+                automated variance alerts and consolidated view.</div>
+            </div>
+            <div
+              style="background:var(--navy-card);border:1px solid rgba(78,173,124,0.2);border-radius:6px;padding:0.9rem">
+              <div
+                style="font-size:0.65rem;color:var(--green-soft);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem">
+                Outcome</div>
+              <div style="font-size:0.78rem;color:var(--slate-light)">Year-end surprises eliminated. Budget accuracy
+                improved 34%. Audit prep time cut by 50%.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Case 3 -->
+        <div class="report-section-preview">
+          <div class="case-tag"
+            style="background:rgba(138,155,181,0.1);border-color:rgba(138,155,181,0.25);color:var(--slate-light);margin-bottom:1rem">
+            Case 3 · Public Sector · Forecast Improvement</div>
+          <h4 style="margin-bottom:1rem">Driver-Based Forecasting for Programs</h4>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem">
+            <div
+              style="background:var(--navy-card);border:1px solid rgba(212,78,78,0.2);border-radius:6px;padding:0.9rem">
+              <div
+                style="font-size:0.65rem;color:var(--red-soft);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem">
+                Problem</div>
+              <div style="font-size:0.78rem;color:var(--slate-light)">Annual budget disconnected from program
+                operations. Leadership lacked confidence in forecasts.</div>
+            </div>
+            <div style="background:var(--navy-card);border:1px solid var(--border);border-radius:6px;padding:0.9rem">
+              <div
+                style="font-size:0.65rem;color:var(--gold);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem">
+                Solution</div>
+              <div style="font-size:0.78rem;color:var(--slate-light)">Driver-based forecasting model tied to program
+                headcount, delivery volumes, and grant schedules.</div>
+            </div>
+            <div
+              style="background:var(--navy-card);border:1px solid rgba(78,173,124,0.2);border-radius:6px;padding:0.9rem">
+              <div
+                style="font-size:0.65rem;color:var(--green-soft);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem">
+                Outcome</div>
+              <div style="font-size:0.78rem;color:var(--slate-light)">Leadership confidence in resource decisions
+                increased 60%. Planning cycle shortened by 3 weeks.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline btn-sm" onclick="closeModal('cases')">Close</button>
+        <button class="btn-download" onclick="handleDownload('mini-case-pack.pdf')"><span class="dl-icon">⬇</span>
+          Preview / Download (PDF)</button>
+        <a href="#contact" class="btn btn-primary btn-sm" onclick="closeModal('cases')"><span>Book Assessment
+            →</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+     BOOKING FORM MODAL
+════════════════════════════════════════════════════════ -->
+  <div class="booking-overlay" id="bookingOverlay">
+    <div class="booking-modal" id="bookingModal">
+
+      <!-- Header + progress steps -->
+      <div class="bm-header">
+        <div class="bm-header-top">
+          <span class="bm-logo"><img src="consultingLogo.png" alt="Clarity FP&A" class="nav-logo-img"> &mdash;
+            Booking</span>
+          <button class="bm-close" id="bmClose" aria-label="Close">✕</button>
+        </div>
+        <div class="bm-steps">
+          <div class="bm-step active" id="bm-step-0">
+            <div class="bm-step-circle">1</div>
+            <div class="bm-step-label">About You</div>
+          </div>
+          <div class="bm-step" id="bm-step-1">
+            <div class="bm-step-circle">2</div>
+            <div class="bm-step-label">Your Needs</div>
+          </div>
+          <div class="bm-step" id="bm-step-2">
+            <div class="bm-step-circle">3</div>
+            <div class="bm-step-label">Schedule</div>
+          </div>
+          <div class="bm-step" id="bm-step-3">
+            <div class="bm-step-circle">4</div>
+            <div class="bm-step-label">Confirm</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panels -->
+      <div class="bm-body" id="bmBody">
+
+        <!-- ── Panel 1: About You ── -->
+        <div class="bm-panel active" id="bm-panel-0">
+          <div class="bm-panel-title">Tell us about yourself</div>
+          <div class="bm-panel-subtitle">We'll use this to personalise your free assessment and make the most of our
+            time together.</div>
+
+          <div class="bm-grid-2">
+            <div class="bm-field">
+              <label class="bm-label">First Name <span class="req">*</span></label>
+              <input class="bm-input" id="bm-fname" type="text" placeholder="e.g. Sarah" autocomplete="given-name" />
+              <span class="bm-error-msg" id="err-fname">Please enter your first name.</span>
+            </div>
+            <div class="bm-field">
+              <label class="bm-label">Last Name <span class="req">*</span></label>
+              <input class="bm-input" id="bm-lname" type="text" placeholder="e.g. Mitchell"
+                autocomplete="family-name" />
+              <span class="bm-error-msg" id="err-lname">Please enter your last name.</span>
+            </div>
+          </div>
+
+          <div class="bm-grid-2">
+            <div class="bm-field">
+              <label class="bm-label">Work Email <span class="req">*</span></label>
+              <input class="bm-input" id="bm-email" type="email" placeholder="you@organization.org"
+                autocomplete="email" />
+              <span class="bm-error-msg" id="err-email">Please enter a valid email address.</span>
+            </div>
+            <div class="bm-field">
+              <label class="bm-label">Phone (optional)</label>
+              <input class="bm-input" id="bm-phone" type="tel" placeholder="+1 (519) 000-0000" autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="bm-grid-2">
+            <div class="bm-field">
+              <label class="bm-label">Organization Name <span class="req">*</span></label>
+              <input class="bm-input" id="bm-org" type="text" placeholder="e.g. Harmony Community Services" />
+              <span class="bm-error-msg" id="err-org">Please enter your organization name.</span>
+            </div>
+            <div class="bm-field">
+              <label class="bm-label">Organization Type <span class="req">*</span></label>
+              <select class="bm-select" id="bm-orgtype">
+                <option value="">— Select type —</option>
+                <option value="nonprofit">Non-Profit / Charity</option>
+                <option value="education">Education (K-12 / Post-Secondary)</option>
+                <option value="public">Public Sector / Government</option>
+                <option value="healthcare">Healthcare / Social Services</option>
+                <option value="foundation">Foundation / Endowment</option>
+                <option value="other">Other Mission-Driven Org</option>
+              </select>
+              <span class="bm-error-msg" id="err-orgtype">Please select your organization type.</span>
+            </div>
+          </div>
+
+          <div class="bm-grid-2">
+            <div class="bm-field">
+              <label class="bm-label">Team Size</label>
+              <select class="bm-select" id="bm-teamsize">
+                <option value="">— Select —</option>
+                <option value="solo">Just me (solo finance)</option>
+                <option value="small">2–5 people</option>
+                <option value="medium">6–15 people</option>
+                <option value="large">15+ people</option>
+              </select>
+            </div>
+            <div class="bm-field">
+              <label class="bm-label">Annual Budget Range</label>
+              <select class="bm-select" id="bm-budget">
+                <option value="">— Select —</option>
+                <option value="under1m">Under $1M</option>
+                <option value="1m-5m">$1M – $5M</option>
+                <option value="5m-20m">$5M – $20M</option>
+                <option value="over20m">$20M+</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Panel 2: Your Needs ── -->
+        <div class="bm-panel" id="bm-panel-1">
+          <div class="bm-panel-title">What do you need help with?</div>
+          <div class="bm-panel-subtitle">Select all that apply — this helps us prepare the right questions before the
+            call.</div>
+
+          <div class="bm-service-grid" id="bmServiceGrid">
+            <label class="bm-service-item">
+              <input type="checkbox" value="reporting" />
+              <span class="bm-service-icon">📈</span>
+              <span class="bm-service-text">
+                <strong>Reporting Automation</strong>
+                <span>Faster month-end close</span>
+              </span>
+              <span class="bm-service-check"></span>
+            </label>
+            <label class="bm-service-item">
+              <input type="checkbox" value="forecasting" />
+              <span class="bm-service-icon">🔭</span>
+              <span class="bm-service-text">
+                <strong>Forecasting &amp; Planning</strong>
+                <span>Driver-based models</span>
+              </span>
+              <span class="bm-service-check"></span>
+            </label>
+            <label class="bm-service-item">
+              <input type="checkbox" value="budgeting" />
+              <span class="bm-service-icon">🏷️</span>
+              <span class="bm-service-text">
+                <strong>Budgeting &amp; Fund Tracking</strong>
+                <span>Grant &amp; multi-fund clarity</span>
+              </span>
+              <span class="bm-service-check"></span>
+            </label>
+            <label class="bm-service-item">
+              <input type="checkbox" value="ai" />
+              <span class="bm-service-icon">🤖</span>
+              <span class="bm-service-text">
+                <strong>AI Enablement</strong>
+                <span>Workflow automation</span>
+              </span>
+              <span class="bm-service-check"></span>
+            </label>
+            <label class="bm-service-item">
+              <input type="checkbox" value="dashboard" />
+              <span class="bm-service-icon">📊</span>
+              <span class="bm-service-text">
+                <strong>Dashboard / Visualization</strong>
+                <span>Power BI &amp; reporting tools</span>
+              </span>
+              <span class="bm-service-check"></span>
+            </label>
+            <label class="bm-service-item">
+              <input type="checkbox" value="assessment" />
+              <span class="bm-service-icon">📄</span>
+              <span class="bm-service-text">
+                <strong>FP&amp;A Assessment ($250)</strong>
+                <span>Full process review</span>
+              </span>
+              <span class="bm-service-check"></span>
+            </label>
+          </div>
+          <span class="bm-error-msg" id="err-services" style="margin-bottom:1rem">Please select at least one
+            area.</span>
+
+          <div class="bm-grid-2">
+            <div class="bm-field">
+              <label class="bm-label">Urgency</label>
+              <select class="bm-select" id="bm-urgency">
+                <option value="">— Select —</option>
+                <option value="asap">As soon as possible</option>
+                <option value="1month">Within 1 month</option>
+                <option value="3months">Within 3 months</option>
+                <option value="exploring">Just exploring options</option>
+              </select>
+            </div>
+            <div class="bm-field">
+              <label class="bm-label">How did you hear about us?</label>
+              <select class="bm-select" id="bm-source">
+                <option value="">— Select —</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="referral">Referral / Word of mouth</option>
+                <option value="search">Google / Web search</option>
+                <option value="sector">Sector network / Association</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="bm-field">
+            <label class="bm-label">Briefly describe your biggest finance challenge</label>
+            <textarea class="bm-textarea" id="bm-challenge"
+              placeholder="e.g. Our reporting takes 2 weeks to complete every month — we want to get it under 2 days…"></textarea>
+            <span class="bm-field-note">Optional but very helpful for a productive first conversation.</span>
+          </div>
+        </div>
+
+        <!-- ── Panel 3: Schedule ── -->
+        <div class="bm-panel" id="bm-panel-2">
+          <div class="bm-panel-title">Choose a date &amp; time</div>
+          <div class="bm-panel-subtitle">All times are in Eastern Time (ET). The free discovery call is 30 minutes.
+          </div>
+
+          <div class="bm-calendar-wrap">
+            <!-- Calendar -->
+            <div class="bm-cal">
+              <div class="bm-cal-header">
+                <button class="bm-cal-nav" id="calPrev">&#8249;</button>
+                <span class="bm-cal-title" id="calMonthLabel"></span>
+                <button class="bm-cal-nav" id="calNext">&#8250;</button>
+              </div>
+              <div class="bm-cal-dow">
+                <span>Su</span><span>Mo</span><span>Tu</span>
+                <span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+              </div>
+              <div class="bm-cal-grid" id="calGrid"></div>
+            </div>
+
+            <!-- Time slots -->
+            <div class="bm-time-panel">
+              <div class="bm-time-title">Available Times</div>
+              <div class="bm-time-selected-date" id="calSelectedDateLabel">← Select a date</div>
+              <div id="timeSlotsWrap">
+                <div class="bm-no-date-msg">Please select a date on the calendar to see available times.</div>
+              </div>
+              <div class="bm-tz-note" id="tzNote"></div>
+            </div>
+          </div>
+          <span class="bm-error-msg" id="err-schedule" style="margin-top:1rem">Please select a date and time.</span>
+        </div>
+
+        <!-- ── Panel 4: Review & Confirm ── -->
+        <div class="bm-panel" id="bm-panel-3">
+          <div class="bm-panel-title">Review &amp; confirm</div>
+          <div class="bm-panel-subtitle">Check your details below. Once submitted we'll send a confirmation email within
+            1 business day.</div>
+
+          <div class="bm-review-card">
+            <h4>📋 Contact Details</h4>
+            <div class="bm-review-row"><span class="bm-review-key">Name</span><span class="bm-review-value"
+                id="rv-name">—</span></div>
+            <div class="bm-review-row"><span class="bm-review-key">Email</span><span class="bm-review-value"
+                id="rv-email">—</span></div>
+            <div class="bm-review-row"><span class="bm-review-key">Organization</span><span class="bm-review-value"
+                id="rv-org">—</span></div>
+            <div class="bm-review-row"><span class="bm-review-key">Org Type</span><span class="bm-review-value"
+                id="rv-orgtype">—</span></div>
+          </div>
+
+          <div class="bm-review-card">
+            <h4>🎯 Services of Interest</h4>
+            <div class="bm-review-row"><span class="bm-review-key">Services</span><span class="bm-review-value"
+                id="rv-services">—</span></div>
+            <div class="bm-review-row"><span class="bm-review-key">Urgency</span><span class="bm-review-value"
+                id="rv-urgency">—</span></div>
+            <div class="bm-review-row"><span class="bm-review-key">Challenge</span><span class="bm-review-value"
+                id="rv-challenge" style="max-width:260px;text-align:right;font-size:0.8rem;line-height:1.5">—</span>
+            </div>
+          </div>
+
+          <div class="bm-review-card">
+            <h4>📅 Appointment</h4>
+            <div class="bm-review-row"><span class="bm-review-key">Date &amp; Time</span><span class="bm-review-value"
+                id="rv-appt">—</span></div>
+            <div class="bm-review-row"><span class="bm-review-key">Duration</span><span class="bm-review-value">30
+                minutes (Discovery Call)</span></div>
+            <div class="bm-review-row"><span class="bm-review-key">Format</span><span class="bm-review-value">Video call
+                (link sent via email)</span></div>
+          </div>
+
+          <label class="bm-consent" id="bmConsent">
+            <input type="checkbox" id="bm-consent-check" style="display:none" />
+            <span class="bm-consent-box"></span>
+            <span class="bm-consent-text">I agree to be contacted by ClarityFP&A regarding my enquiry. My information
+              will be handled respectfully and never sold to third parties.</span>
+          </label>
+          <span class="bm-error-msg" id="err-consent" style="margin-left:0.25rem">Please accept to continue.</span>
+        </div>
+
+        <!-- ── Success screen ── -->
+        <div class="bm-success" id="bmSuccess">
+          <div class="bm-success-icon">✅</div>
+          <h3>You're booked in!</h3>
+          <p>Thank you — your request has been received. We'll confirm your appointment and send a calendar invite to
+            your email within 1 business day.</p>
+          <div class="bm-success-details">
+            <div class="bm-success-detail-row">
+              <span class="bm-success-detail-icon">📅</span>
+              <span class="bm-success-detail-text"><strong id="sc-appt">—</strong>30-minute Discovery Call</span>
+            </div>
+            <div class="bm-success-detail-row">
+              <span class="bm-success-detail-icon">📧</span>
+              <span class="bm-success-detail-text">Confirmation sent to <strong id="sc-email">—</strong></span>
+            </div>
+            <div class="bm-success-detail-row">
+              <span class="bm-success-detail-icon">📍</span>
+              <span class="bm-success-detail-text"><strong>Video call</strong> — link will be in your confirmation
+                email</span>
+            </div>
+          </div>
+          <button class="btn btn-outline" onclick="closeBooking()" style="align-self:center"><span>Close</span></button>
+        </div>
+
+      </div><!-- /bm-body -->
+
+      <!-- Footer nav -->
+      <div class="bm-footer" id="bmFooter">
+        <span class="bm-footer-info" id="bmFooterInfo">Step 1 of 4 — Contact Details</span>
+        <div class="bm-footer-btns">
+          <button class="bm-btn-back" id="bmBack" style="display:none">← Back</button>
+          <button class="bm-btn-next" id="bmNext">
+            <span class="bm-btn-text">Next →</span>
+            <span class="bm-spinner"></span>
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /booking-modal -->
+  </div><!-- /booking-overlay -->
+
+  <!-- Download pending toast -->
+  <div id="toast"
+    style="position:fixed;bottom:2rem;right:2rem;z-index:2000;background:var(--navy-mid);border:1px solid var(--border);border-radius:10px;padding:1rem 1.5rem;max-width:320px;box-shadow:var(--shadow-card);transform:translateY(100px);opacity:0;transition:all 0.35s ease;display:flex;gap:0.75rem;align-items:flex-start">
+    <span style="font-size:1.2rem;flex-shrink:0">📌</span>
+    <div>
+      <div style="font-size:0.85rem;font-weight:500;color:var(--cream);margin-bottom:0.2rem">File Not Yet Uploaded</div>
+      <div style="font-size:0.78rem;color:var(--slate-light)">Upload your document to activate this download. The
+        preview structure is ready.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #07111F;
+  --foreground: #F5F0E8;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* ── Previews ── */
+.report-toc { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 2rem; }
+.report-toc-item { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid var(--border-sub); font-size: 0.85rem; }
+.report-toc-num { width: 24px; height: 24px; border-radius: 50%; background: var(--gold-dim); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; color: var(--gold); flex-shrink: 0; }
+.report-toc-label { flex: 1; color: var(--cream-dim); }
+.report-toc-pages { font-size: 0.72rem; color: var(--slate); }
+
+.maturity-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.6rem; }
+.maturity-label { font-size: 0.78rem; color: var(--slate-light); width: 140px; flex-shrink: 0; }
+.maturity-bar { flex: 1; height: 6px; background: var(--navy-light); border-radius: 3px; position: relative; }
+.maturity-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+.maturity-score { font-size: 0.75rem; font-family: var(--font-mono); color: var(--gold); width: 30px; text-align: right; }
+
+.roadmap-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-top: 1rem; }
+.roadmap-table th { padding: 0.65rem 1rem; text-align: left; background: var(--gold-dim); color: var(--gold); font-size: 0.65rem; text-transform: uppercase; }
+.roadmap-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-sub); color: var(--cream-dim); }
+.roadmap-day { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.68rem; font-weight: 500; }
+.roadmap-day.d30 { background: rgba(201,168,76,0.15); color: var(--gold); }
+.roadmap-day.d60 { background: rgba(78,173,124,0.15); color: var(--green-soft); }
+.roadmap-day.d90 { background: rgba(138,155,181,0.15); color: var(--slate-light); }
+
+.ai-opportunity { display: flex; align-items: flex-start; gap: 0.75rem; padding: 1rem; background: var(--navy-mid); border-radius: 8px; margin-bottom: 0.75rem; border: 1px solid var(--border-sub); }
+.ai-opp-icon { font-size: 1.2rem; flex-shrink: 0; }
+.ai-opp-text strong { display: block; font-size: 0.88rem; color: var(--cream); margin-bottom: 0.15rem; }
+.ai-opp-text span { font-size: 0.8rem; color: var(--slate-light); }
+
+/* ── Dashboard Internal styles ── */
+.dash-kpis { display: grid; gap: 1rem; }
+.dash-kpi { background: var(--navy); border: 1px solid var(--border-sub); border-radius: 8px; padding: 1rem; }
+.dash-kpi-label { font-size: 0.65rem; color: var(--slate); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+.dash-kpi-val { font-size: 1.25rem; font-weight: 700; color: var(--cream); display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.dash-kpi-val span { font-size: 0.65rem; color: var(--green-soft); font-family: var(--font-mono); }
+.dash-kpi-val span.neg { color: var(--red-soft); }
+
+.dash-chart-area { background: var(--navy); border: 1px solid var(--border-sub); border-radius: 10px; padding: 1.5rem; }
+.dash-chart-label { font-size: 0.75rem; color: var(--slate-light); font-weight: 500; margin-bottom: 1.5rem; }
+.dash-bars { display: flex; align-items: flex-end; gap: 6px; }
+.dash-bar { flex: 1; min-width: 0; background: var(--navy-light); border-radius: 2px 2px 0 0; }
+.dash-bar.active { background: var(--gold-dim); border: 1px solid var(--gold); border-bottom: none; }
+.dash-bar.highlight { background: var(--gold); }
+
+.dash-mini { background: var(--navy); border: 1px solid var(--border-sub); border-radius: 10px; padding: 1.25rem; }
+.dash-mini-label { font-size: 0.7rem; color: var(--gold); font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
+.dash-progress { height: 6px; background: var(--navy-light); border-radius: 3px; position: relative; overflow: hidden; margin-bottom: 0.5rem; }
+.dash-progress-fill { height: 100%; border-radius: 3px; background: var(--gold); transition: width 0.3s; }
+.dash-progress-row { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--slate-light); }
+
+.lead-magnet-bar-top {
+  background: linear-gradient(90deg, var(--navy-mid), var(--navy));
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-sub);
+}
+
+.nav {
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.nav.scrolled {
+  background: rgba(7, 17, 31, 0.94);
+  backdrop-filter: blur(20px);
+}
+
+.display-lg {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  margin-bottom: 1rem;
+}
+
+/* ── About Section ── */
+.about-tag {
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--gold-light);
+  letter-spacing: 0.06em;
+}
+
+.cred-card-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.cred-card-logo.aws { background: rgba(255, 153, 0, 0.15); color: #FF9900; border: 1px solid rgba(255, 153, 0, 0.25); }
+.cred-card-logo.db  { background: rgba(255, 60, 0, 0.15); color: #FF3C00; border: 1px solid rgba(255, 60, 0, 0.2); }
+.cred-card-logo.or  { background: rgba(201, 168, 76, 0.15); color: var(--gold); border: 1px solid var(--border); }
+.cred-card-logo.co  { background: rgba(0, 86, 210, 0.15); color: #4A90D9; border: 1px solid rgba(74, 144, 217, 0.2); }
+.cred-card-logo.lss { background: rgba(78, 173, 124, 0.15); color: #4EAD7C; border: 1px solid rgba(78, 173, 124, 0.2); }
